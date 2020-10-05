@@ -1,0 +1,238 @@
+
+
+#svg_z-2,
+#svg_a-1,
+#svg_a-4,
+#svg_t-2,
+#svg_y-3
+{
+  stroke-dasharray: 77;
+  stroke-dashoffset: 77;
+  fill: rgba(0,0,0,0);
+  stroke: #000;
+  animation: circle 2s linear;
+  animation-fill-mode: forwards;
+}
+
+#svg_z-1,
+#svg_z-3,
+#svg_a-2,
+#svg_a-3,
+#svg_t-1,
+#svg_t-3,
+#svg_t-4,
+#svg_y-1,
+#svg_y-2,
+#svg_y-4
+{
+  fill: rgba(0,0,0,0);
+  stroke: #000;
+}
+
+#svg_z-1,
+#svg_z-3
+{
+  stroke-dasharray: 530;
+  stroke-dashoffset: 530;
+  animation: pathz 3s linear 1s;
+  animation-fill-mode: forwards;
+}
+
+#svg_a-3{
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
+  animation: patha2 3s linear 1s;
+  animation-fill-mode: forwards;
+
+}
+#svg_a-2
+{
+  stroke-dasharray: 227;
+  stroke-dashoffset: 227;
+  animation: patha3 3s linear 1s;
+  animation-fill-mode: forwards;
+
+}
+
+#svg_t-1,
+#svg_t-3
+{
+  stroke-dasharray: 119;
+  stroke-dashoffset: 119;
+  animation: patht1 3s linear 1s;
+  animation-fill-mode: forwards;
+
+}
+#svg_t-4
+{
+  stroke-dasharray: 212;
+  stroke-dashoffset: 212;
+  animation: patht2 3s linear 1s;
+  animation-fill-mode: forwards;
+
+}
+
+#svg_y-1,
+#svg_y-4
+{
+  stroke-dasharray: 106;
+  stroke-dashoffset: 106;
+  animation: pathy1 3s linear 1s;
+  animation-fill-mode: forwards;
+
+}
+
+#svg_y-2
+{
+  stroke-dasharray: 319;
+  stroke-dashoffset: 319;
+  animation: pathy2 3s linear 1s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes circle
+{
+  0% {
+    stroke-dashoffset: 77;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+
+@keyframes pathz
+{
+  0% {
+    stroke-dashoffset: 530;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+@keyframes patha2
+{
+  0% {
+    stroke-dashoffset: 470;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+@keyframes patha3
+{
+  0% {
+    stroke-dashoffset: 227;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+@keyframes patht1
+{
+  0% {
+    stroke-dashoffset: 119;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+@keyframes patht2
+{
+  0% {
+    stroke-dashoffset: 212;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+@keyframes pathy1
+{
+  0% {
+    stroke-dashoffset: 106;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
+@keyframes pathy2
+{
+  0% {
+    stroke-dashoffset: 319;
+    fill: rgba(0,0,0,0);
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(0,0,0,1);
+  }
+
+}
