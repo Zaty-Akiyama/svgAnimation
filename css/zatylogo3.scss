@@ -18,8 +18,8 @@ body{
 
 svg{
   overflow: visible;
-  filter: drop-shadow(0px 0px 10px $shadowColor);
-  animation: shadow .3s ease-in 2s;
+  filter: drop-shadow(0px 0px 3px $shadowColor);
+  animation: shadow .3s ease-in 1.5s;
   animation-fill-mode: forwards;
 }
 circle{
@@ -35,19 +35,15 @@ circle{
 #svg-z{
   &__ln-1{
     stroke: $baseColor;
-    stroke-dasharray: 253;
-    stroke-dashoffset: 253;
-    animation: drowZback .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
-
   }
   &__ln-2{
     stroke: $baseColor;
-    stroke-dasharray: 253;
-    stroke-dashoffset: 253;
-    animation: drowZ .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
-
   }
   &__cl-1{
     stroke: $baseColor;
@@ -61,19 +57,15 @@ circle{
 #svg-a{
   &__ln-1{
     stroke: $baseColor;
-    stroke-dasharray: 222;
-    stroke-dashoffset: 222;
-    animation: drowA .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
-
   }
   &__ln-2{
     stroke: $baseColor;
-    stroke-dasharray: 99;
-    stroke-dashoffset: 99;
-    animation: drowA .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
-
   }
   &__cl-1{
     stroke: $baseColor;
@@ -94,25 +86,22 @@ circle{
 #svg-t{
   &__ln-1{
     stroke: $baseColor;
-    stroke-dasharray: 46;
-    stroke-dashoffset: 46;
-    animation: drowTback .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
 
   }
   &__ln-2{
     stroke: $baseColor;
-    stroke-dasharray: 46;
-    stroke-dashoffset: 46;
-    animation: drowT .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
 
   }
   &__ln-3{
     stroke: $baseColor;
-    stroke-dasharray: 99;
-    stroke-dashoffset: 99;
-    animation: drowT .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
 
   }
@@ -128,25 +117,22 @@ circle{
 #svg-y{
   &__ln-1{
     stroke: $baseColor;
-    stroke-dasharray: 38;
-    stroke-dashoffset: 38;
-    animation: drowYback .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
 
   }
   &__ln-2{
     stroke: $baseColor;
-    stroke-dasharray: 38;
-    stroke-dashoffset: 38;
-    animation: drowY .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
 
   }
   &__ln-3{
     stroke: $baseColor;
-    stroke-dasharray: 160;
-    stroke-dashoffset: 160;
-    animation: drowY .5s ease-in 1.5s;
+    opacity: 0;
+    animation: opacity 1s ease-in 1.5s;
     animation-fill-mode: forwards;
 
   }
@@ -172,20 +158,10 @@ circle{
   }
 }
 
-@mixin drow($name:drow,$offset:0) {
-  @keyframes #{$name} {
+@keyframes opacity {
 
-    100%{
-      stroke-dashoffset: $offset;
-    }
-
+  100%{
+    opacity: 1;
   }
-}
 
-@include drow(drowZ,0);
-@include drow(drowZback,506);
-@include drow(drowA,0);
-@include drow(drowT,0);
-@include drow(drowTback,92);
-@include drow(drowY,0);
-@include drow(drowYback,76);
+}

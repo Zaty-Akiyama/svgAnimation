@@ -1,4 +1,28 @@
 
+$baseColorOpacity: rgba(255,255,255,0);
+$baseColor: rgba(255,255,255,1);
+$bgColor: #0E0E0E;
+$shadowColor: rgba(255,255,255,1);
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body{
+  background: $bgColor;
+  width: 95vw;
+}
+svg{
+  overflow: visible;
+}
+
+@keyframes shadow {
+  100%{
+    filter: drop-shadow(0px 0px 20px $shadowColor);
+  }
+}
 
 #svg_z-2,
 #svg_a-1,
@@ -8,8 +32,8 @@
 {
   stroke-dasharray: 77;
   stroke-dashoffset: 77;
-  fill: rgba(0,0,0,0);
-  stroke: #000;
+  fill: $baseColorOpacity;
+  stroke: $baseColor;
   animation: circle 2s linear;
   animation-fill-mode: forwards;
 }
@@ -25,8 +49,8 @@
 #svg_y-2,
 #svg_y-4
 {
-  fill: rgba(0,0,0,0);
-  stroke: #000;
+  fill: $baseColorOpacity;
+  stroke: $baseColor;
 }
 
 #svg_z-1,
@@ -95,144 +119,39 @@
 {
   0% {
     stroke-dashoffset: 77;
-    fill: rgba(0,0,0,0);
+    fill: $baseColorOpacity;
   }
-
   60% {
     stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
+    fill: $baseColorOpacity;
   }
-
   100% {
     stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
+    fill: $baseColor;
   }
-
 }
 
-@keyframes pathz
-{
-  0% {
-    stroke-dashoffset: 530;
-    fill: rgba(0,0,0,0);
+@mixin path($name:path,$offset:0) {
+  @keyframes #{$name} {
+    0% {
+      stroke-dashoffset: $offset;
+      fill: $baseColorOpacity;
+    }
+    60% {
+      stroke-dashoffset: 0;
+      fill: $baseColorOpacity;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      fill: $baseColor;
+    }
   }
-
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
 }
-@keyframes patha2
-{
-  0% {
-    stroke-dashoffset: 470;
-    fill: rgba(0,0,0,0);
-  }
 
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
-}
-@keyframes patha3
-{
-  0% {
-    stroke-dashoffset: 227;
-    fill: rgba(0,0,0,0);
-  }
-
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
-}
-@keyframes patht1
-{
-  0% {
-    stroke-dashoffset: 119;
-    fill: rgba(0,0,0,0);
-  }
-
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
-}
-@keyframes patht2
-{
-  0% {
-    stroke-dashoffset: 212;
-    fill: rgba(0,0,0,0);
-  }
-
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
-}
-@keyframes pathy1
-{
-  0% {
-    stroke-dashoffset: 106;
-    fill: rgba(0,0,0,0);
-  }
-
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
-}
-@keyframes pathy2
-{
-  0% {
-    stroke-dashoffset: 319;
-    fill: rgba(0,0,0,0);
-  }
-
-  60% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,0);
-  }
-
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(0,0,0,1);
-  }
-
-}
+@include path(pathz,530);
+@include path(patha2,470);
+@include path(patha3,227);
+@include path(patht1,119);
+@include path(patht2,212);
+@include path(pathy1,106);
+@include path(pathy2,319);
