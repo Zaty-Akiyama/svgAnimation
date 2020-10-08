@@ -1,0 +1,51 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0e0e0e; }
+
+body {
+  border: 10px solid #FFFFFF;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw; }
+
+svg {
+  animation: rotate .43s ease-out 1.8s;
+  animation-fill-mode: forwards; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+#svg-logo__path-1 {
+  fill: #0e0e0e;
+  stroke: #FFFFFF;
+  stroke-width: 10px;
+  stroke-dasharray: 5632;
+  stroke-dashoffset: 5632;
+  animation: path 1s ease-in,fillAni .5s ease-in 1s;
+  animation-fill-mode: forwards; }
+#svg-logo__polygon-1 {
+  fill: #0e0e0e;
+  stroke: #FFFFFF;
+  stroke-width: 10px;
+  stroke-dasharray: 970;
+  stroke-dashoffset: 970;
+  animation: polygon 1s ease-in,fillAni .5s ease-in 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes fillAni {
+  100% {
+    fill: #FFFFFF;
+    stroke-width: 0; } }
+@keyframes path {
+  0% {
+    stroke-dashoffset: 5632; }
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes polygon {
+  0% {
+    stroke-dashoffset: 970; }
+  100% {
+    stroke-dashoffset: 0; } }

@@ -1,0 +1,74 @@
+/* line 4, zatyicon2.scss */
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0e0e0e; }
+
+/* line 11, zatyicon2.scss */
+body {
+  border: 10px solid #FFFFFF;
+  padding: 9vw;
+  width: 75vw;
+  height: 75vw; }
+
+/* line 17, zatyicon2.scss */
+div {
+  padding: 13vw; }
+
+/* line 20, zatyicon2.scss */
+svg {
+  animation: rotate .43s ease-out 1.8s;
+  animation-fill-mode: forwards;
+  overflow: visible; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+/* line 31, zatyicon2.scss */
+#svg-logo__path-1 {
+  fill: #0e0e0e;
+  stroke: #FFFFFF;
+  stroke-width: 10px;
+  stroke-dasharray: 5632;
+  stroke-dashoffset: 5632;
+  animation: path 1s ease-in,fillAni .5s ease-in 1s;
+  animation-fill-mode: forwards; }
+/* line 40, zatyicon2.scss */
+#svg-logo__polygon-1 {
+  fill: #0e0e0e;
+  stroke: #FFFFFF;
+  stroke-width: 10px;
+  stroke-dasharray: 970;
+  stroke-dashoffset: 970;
+  animation: polygon 1s ease-in,fillAni .5s ease-in 1s;
+  animation-fill-mode: forwards; }
+
+/* line 50, zatyicon2.scss */
+circle {
+  stroke-dasharray: 6000;
+  stroke-dashoffset: 6000;
+  animation: circle .5s ease-in 1s;
+  animation-fill-mode: forwards;
+  transform: rotate(90deg) translate(0px, -1200px); }
+
+@keyframes fillAni {
+  100% {
+    fill: #FFFFFF;
+    stroke-width: 0; } }
+@keyframes path {
+  0% {
+    stroke-dashoffset: 5632; }
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 6000; }
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes polygon {
+  0% {
+    stroke-dashoffset: 970; }
+  100% {
+    stroke-dashoffset: 0; } }

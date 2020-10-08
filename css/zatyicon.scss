@@ -1,0 +1,63 @@
+$bgColor: #0e0e0e;
+$baseColor: #FFFFFF;
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  border: 10px solid $baseColor;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+svg{
+  animation: rotate .43s ease-out 1.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#svg-logo{
+  &__path-1{
+    fill: $bgColor;
+    stroke: $baseColor;
+    stroke-width: 10px;
+    stroke-dasharray: 5632;
+    stroke-dashoffset: 5632;
+    animation: path 1s ease-in,fillAni .5s ease-in 1s;
+    animation-fill-mode: forwards;
+  }
+  &__polygon-1{
+    fill: $bgColor;
+    stroke: $baseColor;
+    stroke-width: 10px;
+    stroke-dasharray: 970;
+    stroke-dashoffset: 970;
+    animation: polygon 1s ease-in,fillAni .5s ease-in 1s;
+    animation-fill-mode: forwards;
+  }
+}
+@mixin stroke($dashstart,$name) {
+  @keyframes #{$name}{
+    0%{
+      stroke-dashoffset: $dashstart;
+    }
+    100%{
+      stroke-dashoffset: 0;
+    }
+  }
+}
+@keyframes fillAni {
+  100%{
+    fill: $baseColor;
+    stroke-width: 0;
+  }
+}
+@include stroke(5632,path);
+@include stroke(970,polygon);
