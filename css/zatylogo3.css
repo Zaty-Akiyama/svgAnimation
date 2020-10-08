@@ -1,117 +1,117 @@
-/* line 8, zatylogo3.scss */
+/* line 5, zatylogo3.scss */
 html {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; }
 
-/* line 14, zatylogo3.scss */
+/* line 11, zatylogo3.scss */
 body {
   background: #0E0E0E;
   width: 95vw; }
 
-/* line 19, zatylogo3.scss */
+/* line 15, zatylogo3.scss */
 svg {
   overflow: visible;
   filter: drop-shadow(0px 0px 3px white);
   animation: shadow .3s ease-in 1.5s;
   animation-fill-mode: forwards; }
 
-/* line 25, zatylogo3.scss */
+/* line 21, zatylogo3.scss */
 circle {
   stroke-width: 5px; }
 
 @keyframes shadow {
   100% {
     filter: drop-shadow(0px 0px 12px white); } }
-/* line 36, zatylogo3.scss */
+/* line 30, zatylogo3.scss */
 #svg-z__ln-1 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 42, zatylogo3.scss */
+/* line 36, zatylogo3.scss */
 #svg-z__ln-2 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 48, zatylogo3.scss */
+/* line 42, zatylogo3.scss */
 #svg-z__cl-1 {
   stroke: white;
   transform: translate(0, -60vh);
   animation: drop .5s ease-in;
   animation-fill-mode: forwards; }
 
-/* line 58, zatylogo3.scss */
+/* line 52, zatylogo3.scss */
 #svg-a__ln-1 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 64, zatylogo3.scss */
+/* line 58, zatylogo3.scss */
 #svg-a__ln-2 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 70, zatylogo3.scss */
+/* line 64, zatylogo3.scss */
 #svg-a__cl-1 {
   stroke: white;
   transform: translate(0, -60vh);
   animation: drop .5s ease-in .3s;
   animation-fill-mode: forwards; }
-/* line 77, zatylogo3.scss */
+/* line 71, zatylogo3.scss */
 #svg-a__cl-2 {
   stroke: white;
   transform: translate(0, -60vh);
   animation: drop .5s ease-in .4s;
   animation-fill-mode: forwards; }
 
-/* line 87, zatylogo3.scss */
+/* line 81, zatylogo3.scss */
 #svg-t__ln-1 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 94, zatylogo3.scss */
+/* line 88, zatylogo3.scss */
 #svg-t__ln-2 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 101, zatylogo3.scss */
+/* line 95, zatylogo3.scss */
 #svg-t__ln-3 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 108, zatylogo3.scss */
+/* line 102, zatylogo3.scss */
 #svg-t__cl-1 {
   stroke: white;
   transform: translate(0, -60vh);
   animation: drop .5s ease-in .6s;
   animation-fill-mode: forwards; }
 
-/* line 118, zatylogo3.scss */
+/* line 112, zatylogo3.scss */
 #svg-y__ln-1 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 125, zatylogo3.scss */
+/* line 119, zatylogo3.scss */
 #svg-y__ln-2 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 132, zatylogo3.scss */
+/* line 126, zatylogo3.scss */
 #svg-y__ln-3 {
   stroke: white;
   opacity: 0;
   animation: opacity 1s ease-in 1.5s;
   animation-fill-mode: forwards; }
-/* line 139, zatylogo3.scss */
+/* line 132, zatylogo3.scss */
 #svg-y__cl-1 {
   stroke: white;
   animation: drop .5s ease-in .9s;
