@@ -62,8 +62,10 @@ circle {
   fill: #0e0e0e; }
 
 @keyframes sand1 {
-  35% {
+  40% {
     transform: translate(500px, 950px) scale(0.5); }
+  75% {
+    transform: translate(0, 205px) scale(1); }
   80% {
     transform: translate(0, 205px) scale(1); }
   98% {
@@ -73,7 +75,7 @@ circle {
 @keyframes sand2 {
   0% {
     transform: translate(0px, 0px) scale(1); }
-  80% {
+  58% {
     transform: translate(500px, 550px) scale(0.5); }
   98% {
     transform: translate(500px, 550px) scale(0.5); }
@@ -82,9 +84,9 @@ circle {
 @keyframes sandln1 {
   0% {
     stroke-dashoffset: 410; }
-  45% {
+  40% {
     stroke-dashoffset: 0; }
-  80% {
+  70% {
     stroke-dashoffset: -410; }
   98% {
     stroke-dashoffset: -410; }
