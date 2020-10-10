@@ -1,0 +1,54 @@
+$baseColorOpacity: rgba(255,255,255,0);
+$baseColor: rgba(255,255,255,1);
+$bgColor: #0E0E0E;
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  border: 10px solid $baseColor;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+#svg-earth{
+  &__money{
+    stroke: $bgColor;
+    stroke-width:4;
+    fill: $baseColor;
+  }
+  &__ln-1{
+    stroke: $baseColor;
+  }
+  &__ln-2{
+    stroke: $baseColor;
+  }
+  &__ln-3{
+    stroke: $baseColor;
+  }
+  &__ln-4{
+    stroke: $baseColor;
+  }
+  &__cl-1{
+    stroke: $baseColor;
+  }
+  &__cl-2{
+    stroke: $baseColor;
+  }
+  &__cl-3{
+    stroke: $baseColor;
+  }
+}
+
+#svg-hand{
+  &__path{
+    &-1,&-2{
+      stroke: $bgColor;
+      fill: $baseColor;
+    }
+  }
+}

@@ -19,7 +19,7 @@ div {
 
 /* line 20, zatyicon3.scss */
 svg {
-  animation: rotate 2s ease-out infinite;
+  animation: rotate 2s ease-out 0s infinite;
   animation-fill-mode: forwards;
   overflow: visible; }
 
@@ -29,52 +29,54 @@ circle {
   stroke-dashoffset: 0;
   transform: rotate(90deg) translate(0px, -2000px); }
 
-/* line 31, zatyicon3.scss */
+/* line 32, zatyicon3.scss */
 #svg-logo__polygon-1, #svg-logo__polygon-2,
 #svg-logo .path-poly, #svg-logo__wiln-1, #svg-logo__wiln-2 {
   fill: #FFFFFF; }
-/* line 35, zatyicon3.scss */
+/* line 36, zatyicon3.scss */
 #svg-logo__leln-1, #svg-logo__leln-2 {
   stroke: #FFFFFF; }
-/* line 38, zatyicon3.scss */
+/* line 39, zatyicon3.scss */
 #svg-logo__leln-1 {
-  stroke-dasharray: 410;
-  stroke-dashoffset: 410;
+  stroke-dasharray: 610;
+  stroke-dashoffset: 610;
   stroke-linecap: round;
-  animation: sandln1 2s ease-in infinite;
+  animation: sandln1 2s ease-in 0s infinite;
   animation-fill-mode: forwards; }
-/* line 45, zatyicon3.scss */
+/* line 46, zatyicon3.scss */
 #svg-logo__polygon-1 {
   transform: translate(500px, 950px) scale(0.5);
-  animation: sand1 2s ease-in infinite;
+  animation: sand1 2s ease-in 0s infinite;
   animation-fill-mode: forwards; }
-/* line 50, zatyicon3.scss */
+/* line 51, zatyicon3.scss */
 #svg-logo__leln-2 {
   stroke-dasharray: 410;
   stroke-dashoffset: 410; }
-/* line 54, zatyicon3.scss */
+/* line 55, zatyicon3.scss */
 #svg-logo__polygon-2 {
-  transform: translate(0px, 0px) scale(1);
-  animation: sand2 2s ease-in infinite;
+  transform: translate(500px, 450px) scale(1.5);
+  animation: sand2 2s ease-in 0s infinite;
   animation-fill-mode: forwards; }
-/* line 60, zatyicon3.scss */
+/* line 61, zatyicon3.scss */
 #svg-logo .path-bg {
   fill: #0e0e0e; }
 
 @keyframes sand1 {
-  40% {
+  0% {
+    transform: translate(500px, 950px) scale(0.5); }
+  25% {
     transform: translate(500px, 950px) scale(0.5); }
   75% {
-    transform: translate(0, 205px) scale(1); }
+    transform: translate(-500px, -445px) scale(1.5); }
   80% {
-    transform: translate(0, 205px) scale(1); }
+    transform: translate(-500px, -445px) scale(1.5); }
   98% {
-    transform: translate(0, 0) scale(1); }
+    transform: translate(-500px, -550px) scale(1.5); }
   100% {
-    transform: translate(0, 0) scale(1); } }
+    transform: translate(-500px, -550px) scale(1.5); } }
 @keyframes sand2 {
   0% {
-    transform: translate(0px, 0px) scale(1); }
+    transform: translate(-500px, -450px) scale(1.5); }
   58% {
     transform: translate(500px, 550px) scale(0.5); }
   98% {
@@ -83,15 +85,15 @@ circle {
     transform: translate(500px, 550px) scale(0.5); } }
 @keyframes sandln1 {
   0% {
-    stroke-dashoffset: 410; }
-  40% {
+    stroke-dashoffset: 610; }
+  45% {
     stroke-dashoffset: 0; }
-  70% {
-    stroke-dashoffset: -410; }
+  80% {
+    stroke-dashoffset: -610; }
   98% {
-    stroke-dashoffset: -410; }
+    stroke-dashoffset: -610; }
   100% {
-    stroke-dashoffset: -410; } }
+    stroke-dashoffset: -610; } }
 @keyframes rotate {
   0% {
     transform: rotate(0deg); }

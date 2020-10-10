@@ -18,7 +18,7 @@ div{
   padding: 7vw;
 }
 svg{
-  animation: rotate 2s ease-out infinite;
+  animation: rotate 2s ease-out 0s infinite;
   animation-fill-mode: forwards;
   overflow: visible;
 }
@@ -27,6 +27,7 @@ circle{
   stroke-dashoffset: 0;
   transform: rotate(90deg) translate(0px,-2000px);
 }
+
 #svg-logo{
   &__polygon-1,&__polygon-2,
   .path-poly,&__wiln-1,&__wiln-2{
@@ -36,15 +37,15 @@ circle{
     stroke: $baseColor;
   }
   &__leln-1{
-    stroke-dasharray: 410;
-    stroke-dashoffset: 410;
+    stroke-dasharray: 610;
+    stroke-dashoffset: 610;
     stroke-linecap: round;
-    animation: sandln1 2s ease-in infinite;
+    animation: sandln1 2s ease-in 0s infinite;
     animation-fill-mode: forwards;
   }
   &__polygon-1{
     transform: translate(500px, 950px) scale(0.5);
-    animation: sand1 2s ease-in infinite;
+    animation: sand1 2s ease-in 0s infinite;
     animation-fill-mode: forwards;
   }
   &__leln-2{
@@ -52,8 +53,8 @@ circle{
     stroke-dashoffset: 410;
   }
   &__polygon-2{
-    transform: translate(0px,0px) scale(1);
-    animation: sand2 2s ease-in infinite;
+    transform: translate(500px,450px) scale(1.5);
+    animation: sand2 2s ease-in 0s infinite;
     animation-fill-mode: forwards;
 
   }
@@ -63,26 +64,29 @@ circle{
 }
 
 @keyframes sand1 {
-  40%{
+  0%{
+    transform: translate(500px, 950px) scale(0.5);
+  }
+  25%{
     transform: translate(500px, 950px) scale(0.5);
   }
   75%{
-    transform: translate(0, 205px) scale(1);
+    transform: translate(-500px, -445px) scale(1.5);
   }
   80%{
-    transform: translate(0, 205px) scale(1);
+    transform: translate(-500px, -445px) scale(1.5);
   }
   98%{
-    transform: translate(0, 0) scale(1);
+    transform: translate(-500px, -550px) scale(1.5);
   }
   100%{
-    transform: translate(0, 0) scale(1);
+    transform: translate(-500px, -550px) scale(1.5);
   }
 }
 
 @keyframes sand2 {
   0%{
-    transform: translate(0px,0px) scale(1);
+    transform: translate(-500px,-450px) scale(1.5);
   }
   58%{
     transform: translate(500px, 550px) scale(0.5);
@@ -96,19 +100,19 @@ circle{
 }
 @keyframes sandln1 {
   0%{
-    stroke-dashoffset: 410;
+    stroke-dashoffset: 610;
   }
-  40%{
+  45%{
     stroke-dashoffset: 0;
   }
-  70%{
-    stroke-dashoffset: -410;
+  80%{
+    stroke-dashoffset: -610;
   }
   98%{
-    stroke-dashoffset: -410;
+    stroke-dashoffset: -610;
   }
   100%{
-    stroke-dashoffset: -410;
+    stroke-dashoffset: -610;
   }
 }
 @keyframes rotate {

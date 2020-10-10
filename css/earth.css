@@ -1,0 +1,46 @@
+/* line 5, earth.scss */
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0E0E0E; }
+
+/* line 12, earth.scss */
+body {
+  border: 10px solid white;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw; }
+
+/* line 19, earth.scss */
+#svg-earth__money {
+  stroke: #0E0E0E;
+  stroke-width: 4;
+  fill: white; }
+/* line 24, earth.scss */
+#svg-earth__ln-1 {
+  stroke: white; }
+/* line 27, earth.scss */
+#svg-earth__ln-2 {
+  stroke: white; }
+/* line 30, earth.scss */
+#svg-earth__ln-3 {
+  stroke: white; }
+/* line 33, earth.scss */
+#svg-earth__ln-4 {
+  stroke: white; }
+/* line 36, earth.scss */
+#svg-earth__cl-1 {
+  stroke: white; }
+/* line 39, earth.scss */
+#svg-earth__cl-2 {
+  stroke: white; }
+/* line 42, earth.scss */
+#svg-earth__cl-3 {
+  stroke: white; }
+
+/* line 49, earth.scss */
+#svg-hand__path-1, #svg-hand__path-2 {
+  stroke: #0E0E0E;
+  fill: white; }
