@@ -2,6 +2,7 @@ $baseColorOpacity: rgba(255,255,255,0);
 $baseColor: rgba(255,255,255,1);
 $bgColor: #0E0E0E;
 
+
 html{
   display: flex;
   justify-content: center;
@@ -15,36 +16,65 @@ body{
   width: 65vw;
   height: 65vw;
 }
+svg{
+  overflow: visible;
+}
 #svg-earth{
-  &__money{
-    stroke: $bgColor;
-    stroke-width:4;
-    fill: $baseColor;
+  transform: translateY(-10px);
+  animation: earthMoveY 3s ease 2.2s infinite forwards;
+  &-wrap{
+    transform: translateX(8px);
+    animation: earthMoveX 8s ease 2.2s infinite forwards;
   }
   &__ln-1{
     stroke: $baseColor;
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+    animation: strokeLn1 .8s ease-in-out .8s forwards;
   }
   &__ln-2{
     stroke: $baseColor;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: strokeLn2 .8s ease-in-out 1s forwards;
   }
   &__ln-3{
     stroke: $baseColor;
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+    animation: strokeLn1 .8s ease-in-out 1.2s forwards;
   }
   &__ln-4{
     stroke: $baseColor;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: strokeLn2 .8s ease-in-out 1.4s forwards;
   }
   &__cl-1{
     stroke: $baseColor;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transform: rotate(-90deg) translate(-144px,0px);
+    animation: strokeCl1 .5s ease-in-out forwards;
+
   }
   &__cl-2{
     stroke: $baseColor;
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    transform: rotate(-90deg) translate(-144px,0px);
+    animation: strokeCl2 .8s ease-in-out .5s forwards;
   }
   &__cl-3{
     stroke: $baseColor;
+    stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    transform: rotate(-90deg) translate(-144px,0px);
+    animation: strokeCl3 .8s ease-in-out 1s forwards;
   }
 }
-
 #svg-hand{
+  transform: translate(0px,10px);
   &__path{
     &-1,&-2{
       stroke: $bgColor;
@@ -52,3 +82,47 @@ body{
     }
   }
 }
+@mixin stroke($dashstart,$name,$dashend:0) {
+  @keyframes #{$name}{
+    0%{
+      stroke-dashoffset: $dashstart;
+    }
+    100%{
+      stroke-dashoffset: $dashend;
+    }
+  }
+}
+@keyframes earthMoveY {
+  0%{
+    transform:translateY(-10px);
+  }
+  50%{
+    transform:translateY(10px)
+  }
+  100%{
+    transform:translateY(-10px)
+  }
+}
+@keyframes earthMoveX {
+  0%{
+    transform:translateX(8px);
+  }
+  25%{
+    transform:translateX(-8px);
+  }
+  50%{
+    transform:translateX(8px)
+  }
+  75%{
+    transform:translateX(-8px);
+  }
+  100%{
+    transform:translateX(8px)
+  }
+}
+
+@include stroke(440,strokeCl1);
+@include stroke(380,strokeCl2,570);
+@include stroke(380,strokeCl3,190);
+@include stroke(140,strokeLn1);
+@include stroke(120,strokeLn2);
