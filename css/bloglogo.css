@@ -1,0 +1,199 @@
+* {
+  stroke: #0E0E0E;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+
+body {
+  border: 10px solid #0E0E0E;
+  width: 92vw;
+  height: 92vw;
+  display: flex;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+}
+
+@keyframes zatycolor {
+  from {
+    stroke: white;
+    fill: white;
+  }
+  to {
+    stroke: #0E0E0E;
+    fill: #0E0E0E;
+  }
+}
+#svg-zaty {
+  transform: scale(1.2) translate(4000px, 0px);
+  animation: transIcon 1.5s ease-in-out 1.2s forwards;
+}
+#svg-zaty__path-1, #svg-zaty__polygon-1 {
+  stroke: white;
+  fill: white;
+  animation: zatycolor .5s ease 3.1s forwards;
+}
+
+#svg-shiro {
+  transform: scale(1.2) translate(-2800px, 0px);
+  animation: transShiro 1.5s ease-out 0s forwards;
+}
+#svg-shiro__cl-1 {
+  transform: translate(0px, 0px);
+  animation: rightEye 2s ease 2s forwards;
+}
+@keyframes rightEye {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-20px, 0px);
+  }
+  90% {
+    transform: translate(-20px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+#svg-shiro__cl-2 {
+  transform: translate(0px, 0px);
+  animation: leftEye 2s ease 2s forwards;
+}
+@keyframes leftEye {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-15px, 0px);
+  }
+  90% {
+    transform: translate(-15px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+#svg-shiro__path-2 {
+  transform: translate(-100px, -180px);
+  animation: mouth 2s ease 2s forwards;
+}
+@keyframes mouth {
+  0% {
+    transform: translate(-100px, -180px);
+  }
+  20% {
+    transform: translate(-110px, -180px);
+  }
+  90% {
+    transform: translate(-110px, -180px);
+  }
+  100% {
+    transform: translate(-100px, -180px);
+  }
+}
+@keyframes bot {
+  0% {
+    transform: scale(1.2) translate(-270px, 0px) scaleY(1);
+  }
+  38% {
+    transform: scale(1.2) translate(-270px, 96px) scaleY(0.8);
+  }
+  60% {
+    transform: scale(1.2) translate(-270px, 96px) scaleY(0.8);
+  }
+  100% {
+    transform: scale(1.2) translate(-270px, 0px) scaleY(1);
+  }
+}
+#svg-goma {
+  transform: scale(1.2) translate(-2680px, 0px);
+  animation: transGoma 1.5s ease-out 0.3s forwards,bot .8s ease 1.8s forwards;
+}
+
+#svg-nju {
+  transform: scale(1.2) translate(-2560px, 0px);
+  animation: transNju 1.5s ease-out 0.5s forwards;
+}
+#svg-nju__cl-1 {
+  ry: 40;
+  animation: njueyeright 0.5s ease 2.5s forwards;
+}
+@keyframes njueyeright {
+  0% {
+    ry: 40;
+  }
+  25% {
+    ry: 1;
+  }
+  50% {
+    ry: 40;
+  }
+  75% {
+    ry: 1;
+  }
+  100% {
+    ry: 40;
+  }
+}
+#svg-nju__cl-2 {
+  rx: 40;
+  animation: njueyeleft 0.5s ease 2.5s forwards;
+}
+@keyframes njueyeleft {
+  0% {
+    rx: 40;
+  }
+  25% {
+    rx: 1;
+  }
+  50% {
+    rx: 40;
+  }
+  75% {
+    rx: 1;
+  }
+  100% {
+    rx: 40;
+  }
+}
+@keyframes transShiro {
+  0% {
+    transform: scale(1.2) translate(2300px, 0px);
+  }
+  100% {
+    transform: scale(1.2) translate(-140px, 0px);
+  }
+}
+@keyframes transGoma {
+  0% {
+    transform: scale(1.2) translate(-270px, -2300px);
+  }
+  100% {
+    transform: scale(1.2) translate(-270px, 0px);
+  }
+}
+@keyframes transNju {
+  0% {
+    transform: scale(1.2) translate(-400px, 2300px);
+  }
+  100% {
+    transform: scale(1.2) translate(-400px, 0px);
+  }
+}
+@keyframes transIcon {
+  0% {
+    transform: scale(1.2) translate(-2000px, 0px);
+  }
+  100% {
+    transform: scale(1.2) translate(24px, 0px);
+  }
+}

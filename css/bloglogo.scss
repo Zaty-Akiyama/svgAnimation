@@ -1,0 +1,127 @@
+$baseColor: #0E0E0E;
+$bgColor: rgba(255,255,255,1);
+
+*{
+  stroke: $baseColor;
+}
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  border: 10px solid $baseColor;
+  width: 92vw;
+  height: 92vw;
+  display: flex;
+  overflow: hidden;
+}
+svg{
+  width: 100%;
+}
+@keyframes zatycolor {
+  from{
+    stroke: $bgColor;
+    fill: $bgColor;
+  }
+  to{
+    stroke: $baseColor;
+    fill: $baseColor;
+  }
+}
+#svg-zaty{
+  transform: scale(1.2)translate(4000px,0px);
+  animation: transIcon 1.5s ease-in-out 1.2s forwards;
+  &__path-1,&__polygon-1{
+    stroke: $bgColor;
+    fill: $bgColor;
+    animation: zatycolor .5s ease 3.1s forwards;
+  }
+}
+@mixin face($name,$t,$ts:0px,$ty:0px){
+  animation: $name 2s ease 2s forwards;
+  @keyframes #{$name} {
+    0%{
+      transform: translate($ts,$ty);
+    }
+    20%{
+      transform: translate($t,$ty);
+    }
+    90%{
+      transform: translate($t,$ty);
+    }
+    100%{
+      transform: translate($ts,$ty);
+    }
+  }
+}
+@keyframes jamp {
+  0%{}
+  100%{}
+}
+#svg-shiro{
+  transform: scale(1.2)translate(-2800px,0px);
+  animation: transShiro 1.5s ease-out 0s forwards;
+  &__cl-1{
+    transform: translate(0px,0px);
+    @include face(rightEye,-20px);
+  }
+  &__cl-2{
+    transform: translate(0px,0px);
+    @include face(leftEye,-15px);
+  }
+  &__path-2{
+    transform: translate(-100px,-180px);
+    @include face(mouth,-110px,-100px,-180px);
+  }
+}
+@keyframes bot {
+  0%{transform: scale(1.2)translate(-270px,0px)scaleY(1);}
+  38%{transform: scale(1.2)translate(-270px,96px)scaleY(0.8);}
+  60%{transform: scale(1.2)translate(-270px,96px)scaleY(0.8);}
+  100%{transform: scale(1.2)translate(-270px,0px)scaleY(1);}
+}
+#svg-goma{
+  transform: scale(1.2)translate(-2680px,0px);
+  animation: transGoma 1.5s ease-out 0.3s forwards,bot .8s ease 1.8s forwards;
+}
+@mixin eyeaction ($r,$name){
+  #{$r}: 40;
+  animation: $name .5s ease 2.5s forwards;
+  @keyframes #{$name} {
+    0%{  #{$r}:40; }
+    25%{ #{$r}:1;  }
+    50%{ #{$r}:40; }
+    75%{ #{$r}:1;  }
+    100%{#{$r}:40; }
+  }
+}
+#svg-nju{
+  transform: scale(1.2)translate(-2560px,0px);
+  animation: transNju 1.5s ease-out 0.5s forwards;
+  &__cl-1{
+    @include eyeaction(ry,njueyeright);
+  }
+  &__cl-2{
+    @include eyeaction(rx,njueyeleft);
+  }
+}
+
+@mixin trans($startX,$startY,$endX,$endY,$name) {
+  @keyframes #{$name} {
+    0%{
+      transform: scale(1.2)translate($startX,$startY);
+    }
+    100%{
+      transform: scale(1.2)translate($endX,$endY);
+    }
+  }
+}
+
+@include trans(2300px,0px,-140px,0px,transShiro);
+@include trans(-270px,-2300px,-270px,0px,transGoma);
+@include trans(-400px,2300px,-400px,0px,transNju);
+@include trans(-2000px,0px,24px,0px,transIcon);
