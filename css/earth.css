@@ -1,124 +1,149 @@
-/* line 6, earth.scss */
 html {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #0E0E0E; }
+  background: #0E0E0E;
+}
 
-/* line 13, earth.scss */
 body {
   border: 10px solid white;
   padding: 15vw;
   width: 65vw;
-  height: 65vw; }
+  height: 65vw;
+}
 
-/* line 19, earth.scss */
 svg {
-  overflow: visible; }
+  overflow: visible;
+}
 
-/* line 22, earth.scss */
 #svg-earth {
   transform: translateY(-10px);
-  animation: earthMoveY 3s ease 2.2s infinite forwards; }
-  /* line 25, earth.scss */
-  #svg-earth-wrap {
-    transform: translateX(8px);
-    animation: earthMoveX 8s ease 2.2s infinite forwards; }
-  /* line 29, earth.scss */
-  #svg-earth__ln-1 {
-    stroke: white;
-    stroke-dasharray: 140;
-    stroke-dashoffset: 140;
-    animation: strokeLn1 .8s ease-in-out .8s forwards; }
-  /* line 35, earth.scss */
-  #svg-earth__ln-2 {
-    stroke: white;
-    stroke-dasharray: 120;
-    stroke-dashoffset: 120;
-    animation: strokeLn2 .8s ease-in-out 1s forwards; }
-  /* line 41, earth.scss */
-  #svg-earth__ln-3 {
-    stroke: white;
-    stroke-dasharray: 140;
-    stroke-dashoffset: 140;
-    animation: strokeLn1 .8s ease-in-out 1.2s forwards; }
-  /* line 47, earth.scss */
-  #svg-earth__ln-4 {
-    stroke: white;
-    stroke-dasharray: 120;
-    stroke-dashoffset: 120;
-    animation: strokeLn2 .8s ease-in-out 1.4s forwards; }
-  /* line 53, earth.scss */
-  #svg-earth__cl-1 {
-    stroke: white;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-    transform: rotate(-90deg) translate(-144px, 0px);
-    animation: strokeCl1 .5s ease-in-out forwards; }
-  /* line 61, earth.scss */
-  #svg-earth__cl-2 {
-    stroke: white;
-    stroke-dasharray: 380;
-    stroke-dashoffset: 380;
-    transform: rotate(-90deg) translate(-144px, 0px);
-    animation: strokeCl2 .8s ease-in-out .5s forwards; }
-  /* line 68, earth.scss */
-  #svg-earth__cl-3 {
-    stroke: white;
-    stroke-dasharray: 380;
-    stroke-dashoffset: 380;
-    transform: rotate(-90deg) translate(-144px, 0px);
-    animation: strokeCl3 .8s ease-in-out 1s forwards; }
+  animation: earthMoveY 3s ease 2.2s infinite forwards;
+}
+#svg-earth-wrap {
+  transform: translateX(8px);
+  animation: earthMoveX 8s ease 2.2s infinite forwards;
+}
+#svg-earth__ln-1 {
+  stroke: white;
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: strokeLn1 .8s ease-in-out .8s forwards;
+}
+#svg-earth__ln-2 {
+  stroke: white;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: strokeLn2 .8s ease-in-out 1s forwards;
+}
+#svg-earth__ln-3 {
+  stroke: white;
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+  animation: strokeLn1 .8s ease-in-out 1.2s forwards;
+}
+#svg-earth__ln-4 {
+  stroke: white;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: strokeLn2 .8s ease-in-out 1.4s forwards;
+}
+#svg-earth__cl-1 {
+  stroke: white;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  transform: rotate(-90deg) translate(-144px, 0px);
+  animation: strokeCl1 .5s ease-in-out forwards;
+}
+#svg-earth__cl-2 {
+  stroke: white;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  transform: rotate(-90deg) translate(-144px, 0px);
+  animation: strokeCl2 .8s ease-in-out .5s forwards;
+}
+#svg-earth__cl-3 {
+  stroke: white;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  transform: rotate(-90deg) translate(-144px, 0px);
+  animation: strokeCl3 .8s ease-in-out 1s forwards;
+}
 
-/* line 76, earth.scss */
 #svg-hand {
-  transform: translate(0px, 10px); }
-  /* line 79, earth.scss */
-  #svg-hand__path-1, #svg-hand__path-2 {
-    stroke: #0E0E0E;
-    fill: white; }
+  transform: translate(0px, 10px);
+}
+#svg-hand__path-1, #svg-hand__path-2 {
+  stroke: #0E0E0E;
+  fill: white;
+}
 
 @keyframes earthMoveY {
   0% {
-    transform: translateY(-10px); }
+    transform: translateY(-10px);
+  }
   50% {
-    transform: translateY(10px); }
+    transform: translateY(10px);
+  }
   100% {
-    transform: translateY(-10px); } }
+    transform: translateY(-10px);
+  }
+}
 @keyframes earthMoveX {
   0% {
-    transform: translateX(8px); }
+    transform: translateX(8px);
+  }
   25% {
-    transform: translateX(-8px); }
+    transform: translateX(-8px);
+  }
   50% {
-    transform: translateX(8px); }
+    transform: translateX(8px);
+  }
   75% {
-    transform: translateX(-8px); }
+    transform: translateX(-8px);
+  }
   100% {
-    transform: translateX(8px); } }
+    transform: translateX(8px);
+  }
+}
 @keyframes strokeCl1 {
   0% {
-    stroke-dashoffset: 440; }
+    stroke-dashoffset: 440;
+  }
   100% {
-    stroke-dashoffset: 0; } }
+    stroke-dashoffset: 0;
+  }
+}
 @keyframes strokeCl2 {
   0% {
-    stroke-dashoffset: 380; }
+    stroke-dashoffset: 380;
+  }
   100% {
-    stroke-dashoffset: 570; } }
+    stroke-dashoffset: 570;
+  }
+}
 @keyframes strokeCl3 {
   0% {
-    stroke-dashoffset: 380; }
+    stroke-dashoffset: 380;
+  }
   100% {
-    stroke-dashoffset: 190; } }
+    stroke-dashoffset: 190;
+  }
+}
 @keyframes strokeLn1 {
   0% {
-    stroke-dashoffset: 140; }
+    stroke-dashoffset: 140;
+  }
   100% {
-    stroke-dashoffset: 0; } }
+    stroke-dashoffset: 0;
+  }
+}
 @keyframes strokeLn2 {
   0% {
-    stroke-dashoffset: 120; }
+    stroke-dashoffset: 120;
+  }
   100% {
-    stroke-dashoffset: 0; } }
+    stroke-dashoffset: 0;
+  }
+}

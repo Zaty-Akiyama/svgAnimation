@@ -1,0 +1,295 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0E0E0E;
+}
+
+body {
+  border: 10px solid white;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+
+svg {
+  overflow: visible;
+}
+
+.svg-candy {
+  transform: translate(605px, 300px);
+}
+
+.svg-candy--blue {
+  opacity: 0;
+  transform: translate(610px, 850px) scale(0.1) rotate(25deg);
+  animation-name: blue;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes blue {
+  0% {
+    opacity: 1;
+    transform: translate(610px, 850px) scale(0.1) rotate(25deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(1047px, -2300px) scale(3) rotate(25deg);
+  }
+}
+.svg-candy--blue2 {
+  opacity: 0;
+  transform: translate(569px, 1100px) scale(0.1) rotate(-93deg);
+  animation-name: blue2;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes blue2 {
+  0% {
+    opacity: 1;
+    transform: translate(569px, 1100px) scale(0.1) rotate(-93deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-11569px, 7500px) scale(11) rotate(-93deg);
+  }
+}
+.svg-candy--red {
+  opacity: 0;
+  transform: translate(680px, 850px) scale(0.1) rotate(40deg);
+  animation-name: red;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes red {
+  0% {
+    opacity: 1;
+    transform: translate(680px, 850px) scale(0.1) rotate(40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(458px, -2846px) scale(2.5) rotate(40deg);
+  }
+}
+.svg-candy--red2 {
+  opacity: 0;
+  transform: translate(610px, 943px) scale(0.1) rotate(0deg);
+  animation-name: red2;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes red2 {
+  0% {
+    opacity: 1;
+    transform: translate(610px, 943px) scale(0.1) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(761px, -550px) scale(1.2) rotate(0deg);
+  }
+}
+.svg-candy--red3 {
+  opacity: 0;
+  transform: translate(556px, 1000px) scale(0.1) rotate(-40deg);
+  animation-name: red3;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes red3 {
+  0% {
+    opacity: 1;
+    transform: translate(556px, 1000px) scale(0.1) rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-18156px, -4000px) scale(14) rotate(-40deg);
+  }
+}
+.svg-candy--yellow {
+  opacity: 0;
+  transform: translate(559px, 1000px) scale(0.1) rotate(-33deg);
+  animation-name: yellow;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes yellow {
+  0% {
+    opacity: 1;
+    transform: translate(559px, 1000px) scale(0.1) rotate(-33deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-2359px, 460px) scale(2) rotate(-33deg);
+  }
+}
+.svg-candy--yellow2 {
+  opacity: 0;
+  transform: translate(574px, 1100px) scale(0.1) rotate(-85deg);
+  animation-name: yellow2;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes yellow2 {
+  0% {
+    opacity: 1;
+    transform: translate(574px, 1100px) scale(0.1) rotate(-85deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-3174px, 2312px) scale(4) rotate(-85deg);
+  }
+}
+.svg-candy--green {
+  opacity: 0;
+  transform: translate(574px, 1100px) scale(0.1) rotate(-90deg);
+  animation-name: green;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes green {
+  0% {
+    opacity: 1;
+    transform: translate(574px, 1100px) scale(0.1) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-11404px, 10422px) scale(12) rotate(-90deg);
+  }
+}
+.svg-candy--green2 {
+  opacity: 0;
+  transform: translate(563px, 986px) scale(0.1) rotate(-59deg);
+  animation-name: green2;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes green2 {
+  0% {
+    opacity: 1;
+    transform: translate(563px, 986px) scale(0.1) rotate(-59deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-2662px, 860px) scale(2) rotate(-59deg);
+  }
+}
+.svg-candy--green3 {
+  opacity: 0;
+  transform: translate(733px, 946px) scale(0.1) rotate(59deg);
+  animation-name: green3;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+}
+
+@keyframes green3 {
+  0% {
+    opacity: 1;
+    transform: translate(733px, 946px) scale(0.1) rotate(59deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(9920px, -15060px) scale(13) rotate(59deg);
+  }
+}
+#svg-pumpkin {
+  transform: translate(-200px, 200px);
+}
+#svg-pumpkin__eye-left, #svg-pumpkin__eye-right {
+  rx: 0;
+  ry: 0;
+  animation-name: eye;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-delay: .8s;
+}
+#svg-pumpkin__chin {
+  animation-name: chin;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes eye {
+  30% {
+    rx: 30px;
+    ry: 50px;
+    fill: rgba(0, 255, 255, 0);
+  }
+  60% {
+    rx: 3000px;
+    ry: 5000px;
+    fill: rgba(0, 255, 255, 0.2);
+  }
+  90% {
+    rx: 30px;
+    ry: 50px;
+    fill: rgba(0, 255, 255, 0.9);
+  }
+  100% {
+    rx: 30px;
+    ry: 50px;
+    fill: cyan;
+  }
+}
+@keyframes chin {
+  0% {
+    transform: translateY(0px);
+  }
+  4% {
+    transform: translateY(30px);
+  }
+  8% {
+    transform: translateY(5px);
+  }
+  12% {
+    transform: translateY(30px);
+  }
+  16% {
+    transform: translateY(5px);
+  }
+  20% {
+    transform: translateY(30px);
+  }
+  24% {
+    transform: translateY(5px);
+  }
+  28% {
+    transform: translateY(30px);
+  }
+  32% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(250px);
+  }
+}
