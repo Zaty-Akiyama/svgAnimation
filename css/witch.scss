@@ -1,0 +1,122 @@
+$baseColorOpacity: rgba(255,255,255,0);
+$baseColor: rgba(255,255,255,1);
+$bgColor: #333;
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+svg{
+  overflow: visible;
+}
+#svg-moon{
+  transform: scale(2) translate(-800px,-460px);
+}
+#grave{
+  transform: translate(670px,-123px) rotate(9deg);
+}
+#svg-witch{
+  transform: scale(2) translate(-800px,-460px);
+  &__path-1{
+    transform: translate(10px,-10px);
+    animation: {
+      name: fadeCloud1,fadeoutCloud1;
+      duration: 5.5s,10s;
+      timing-function: ease-in-out,linear;
+      fill-mode: forwards;
+      delay: 0s,5.5s;
+    }
+  }
+  &__path-2{
+    transform: translate(10px,-10px);
+    animation: {
+      name: fadeCloud2,fadeoutCloud2;
+      duration: 5.5s,10s;
+      timing-function: ease-in-out,linear;
+      fill-mode: forwards;
+      delay: 0s,5.5s;
+    }
+  }
+
+}
+#svg-majo{
+  transform: translate(3500px,100px)scale(0.7);
+  animation: {
+    name: majo;
+    duration: 3.5s;
+    timing-function: linear;
+    fill-mode: forwards;
+    delay: 3s;
+  }
+}
+#pumpkin{
+  transform: translate(470px,570px);
+  &__face{
+    fill: #222;
+    animation: {
+      name: pumpkinFace;
+      duration: 4s;
+      timing-function: linear;
+      fill-mode: forwards;
+      iteration-count: infinite;
+    }
+  }
+}
+@keyframes pumpkinFace {
+  0%,21%,23%,40%,43%,45%,79%,81%,100%{
+    fill: #222;
+  }
+  22%,41%,44%,80%{
+    fill: #888;
+  }
+}
+@keyframes majo {
+  from{
+    transform: translate(3500px,100px)scale(0.7);
+  }
+  to{
+    transform: translate(-1500px,100px)scale(0.7);
+  }
+}
+@keyframes fadeCloud1 {
+  0%{
+    transform: translate(10px,-10px);
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(900px,-10px);
+    opacity: .8;
+  }
+}
+@keyframes fadeoutCloud1 {
+  to{
+    transform: translate(1000px,-10px);
+  }
+}
+@keyframes fadeCloud2 {
+  0%{
+    transform: translate(0px,0px);
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(-600px,0px);
+    opacity: .8;
+  }
+}
+@keyframes fadeoutCloud2 {
+  to{
+    transform: translate(-700px,-10px);
+  }
+}
