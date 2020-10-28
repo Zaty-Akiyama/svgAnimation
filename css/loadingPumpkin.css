@@ -1,0 +1,107 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0e0e0e;
+}
+
+body {
+  border: 10px solid #FFFFFF;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+
+svg {
+  overflow: visible;
+  transform: scale(0.7);
+}
+
+.face {
+  fill: #0e0e0e;
+}
+
+.set .face {
+  fill: #FFFFFF;
+}
+
+.set .color {
+  fill: #ffb91d;
+}
+
+.pumpkins * {
+  transition: .2s;
+}
+.pumpkins-1.set {
+  transform: translate(350px, 0px);
+}
+.pumpkins-1.set .color {
+  fill: #ff9429;
+}
+.pumpkins-2.set {
+  transform: translate(350px, 0px);
+}
+.pumpkins-2.set .color {
+  fill: #ffcd2c;
+}
+.pumpkins-3.set {
+  transform: translate(-1330px, 450px);
+}
+.pumpkins-3.set .color {
+  fill: #ffb91d;
+}
+.pumpkins-4.set {
+  transform: translate(0px, 250px);
+}
+.pumpkins-4.set .color {
+  fill: #f9be3d;
+}
+.pumpkins-5.set {
+  transform: translate(660px, -210px);
+}
+.pumpkins-5.set .color {
+  fill: #f99900;
+}
+.pumpkins-6.set {
+  transform: translate(0px, 250px);
+}
+.pumpkins-6.set .color {
+  fill: #f7ac28;
+}
+.pumpkins-7.set {
+  transform: translate(350px, 0px);
+}
+.pumpkins-7.set .color {
+  fill: #f79428;
+}
+.pumpkins-8.set {
+  transform: translate(350px, 0px);
+}
+.pumpkins-8.set .color {
+  fill: #f7b82b;
+}
+.pumpkins-1 {
+  transform: translate(554px, 276px) scale(0.65);
+}
+.pumpkins-2 {
+  transform: translate(561px, 276px) scale(0.65);
+}
+.pumpkins-3 {
+  transform: translate(-541px, 574px) scale(0.65);
+}
+.pumpkins-4 {
+  transform: translate(324px, 447px) scale(0.65);
+}
+.pumpkins-5 {
+  transform: translate(766px, 144px) scale(0.65);
+}
+.pumpkins-6 {
+  transform: translate(336px, 448px) scale(0.65);
+}
+.pumpkins-7 {
+  transform: translate(556px, 289px) scale(0.65);
+}
+.pumpkins-8 {
+  transform: translate(561px, 288px) scale(0.65);
+}

@@ -1,0 +1,108 @@
+$bgColor: #0e0e0e;
+$baseColor: #FFFFFF;
+$faceColor: #ffb91d;
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  border: 10px solid $baseColor;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+svg{
+  overflow: visible;
+  transform: scale(0.7);
+}
+.face{
+  fill: $bgColor;
+}
+.set .face{
+  fill: $baseColor;
+}
+.set .color{
+  fill: $faceColor;
+}
+.pumpkins{
+  *{
+    transition: .2s;
+  }
+  &-1.set{
+    transform: translate(350px, 0px);
+    .color{
+      fill: #ff9429;
+    }
+  }
+  &-2.set{
+    transform: translate(350px, 0px);
+    .color{
+      fill: #ffcd2c;
+    }
+  }
+  &-3.set{
+    transform: translate(-1330px, 450px);
+    .color{
+      fill: #ffb91d;
+    }
+  }
+  &-4.set{
+    transform: translate(0px, 250px);
+    .color{
+      fill: #f9be3d;
+    }
+  }
+  &-5.set{
+    transform: translate(660px, -210px);
+    .color{
+      fill: #f99900;
+    }
+  }
+  &-6.set{
+    transform: translate(0px, 250px);
+    .color{
+      fill: #f7ac28;
+    }
+  }
+  &-7.set{
+    transform: translate(350px, 0px);
+    .color{
+      fill: #f79428;
+    }
+  }
+  &-8.set{
+    transform: translate(350px, 0px);
+    .color{
+      fill: #f7b82b;
+    }
+  }
+  &-1{
+    transform: translate(554px, 276px) scale(0.65);
+  }
+  &-2{
+    transform: translate(561px, 276px) scale(0.65);
+  }
+  &-3{
+    transform: translate(-541px, 574px) scale(0.65);
+  }
+  &-4{
+    transform: translate(324px, 447px) scale(0.65);
+  }
+  &-5{
+    transform: translate(766px, 144px) scale(0.65);
+  }
+  &-6{
+    transform: translate(336px, 448px) scale(0.65);
+  }
+  &-7{
+    transform: translate(556px, 289px) scale(0.65);
+  }
+  &-8{
+    transform: translate(561px, 288px) scale(0.65);
+  }
+
+}
