@@ -1,0 +1,66 @@
+* {
+  stroke: #0E0E0E;
+  margin: 0;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  font-size: 10px;
+}
+
+svg {
+  overflow: visible;
+  transform-origin: center;
+}
+
+.back {
+  display: block;
+  position: absolute;
+}
+.back * {
+  stroke-width: 0;
+}
+
+.middle {
+  position: absolute;
+  transform: scale(2.6) translate(23.5em, 38.7em);
+  animation-name: rotateback;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+}
+.middle * {
+  stroke-width: 0;
+}
+
+.front {
+  position: absolute;
+  transform: scale(3) translate(-16em, 43em);
+  animation-name: rotate;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+}
+.front * {
+  stroke-width: 0;
+}
+
+@keyframes rotate {
+  to {
+    transform: scale(3) translate(-16em, 43em) rotate(360deg);
+  }
+}
+@keyframes rotateback {
+  to {
+    transform: scale(2.6) translate(23.5em, 38.7em) rotate(-360deg);
+  }
+}

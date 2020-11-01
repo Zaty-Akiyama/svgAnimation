@@ -1,0 +1,67 @@
+$baseColor: #0E0E0E;
+$bgColor: rgba(255,255,255,1);
+
+*{
+  stroke: $baseColor;
+  margin: 0;
+}
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  font-size: 10px;
+}
+svg{
+  overflow: visible;
+  transform-origin: center;
+}
+.back{
+  display: block;
+  position: absolute;
+  *{
+    stroke-width: 0;
+  }
+}
+.middle{
+  position: absolute;
+  transform: scale(2.6) translate(23.5em, 38.7em);
+  animation: {
+    name: rotateback;
+    duration:50s;
+    timing-function: linear;
+  }
+  *{
+    stroke-width: 0;
+  }
+}
+.front{
+  position: absolute;
+  transform: scale(3)translate(-16em, 43em);
+  animation: {
+    name: rotate;
+    duration: 80s;
+    timing-function: linear;
+  }
+  *{
+    stroke-width: 0;
+  }
+}
+@keyframes rotate {
+  to{
+    transform: scale(3)translate(-16em, 43em)rotate(360deg);
+  }
+}
+@keyframes rotateback {
+  to{
+    transform: scale(2.6) translate(23.5em, 38.7em)rotate(-360deg);
+  }
+}
