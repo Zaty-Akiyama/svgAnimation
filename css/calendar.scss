@@ -1,0 +1,56 @@
+$baseColor: rgba(255,255,255,1);
+$bgColor: #0E0E0E;
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+}
+body{
+  border: 10px solid $baseColor;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+svg{
+  overflow: visible;
+  font-size: 10px;
+}
+.cell-rect{
+  @for $i from 1 to 26 {
+    &:nth-of-type(#{$i}){
+      height: 0;
+      transition: .1s ease .05s * $i;
+    }
+  }
+}
+.first{
+  position: relative;
+  transform-origin: right 20em;
+  animation: {
+    name: paging;
+    duration: .5s;
+    delay: 1.8s;
+  }
+  @keyframes paging {
+    40%{
+      transform: rotate(-20deg);
+      opacity: 1;
+    }
+    100%{
+      transform: rotate(-20deg)translate(-8em,22em);
+      opacity: 0;
+    }
+  }
+}
+.back{
+  width: 78em;
+  height: 56em;
+  x: 1em;
+  y: 22em;
+}
+.on .cell-rect{
+  height: 8em;
+}

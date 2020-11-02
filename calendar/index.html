@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/calendar.css">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+        <g id="paper">
+          <rect class="back" x="672" y="252" width="80" height="80" fill="#000"/>
+          <path d="M776,224V760a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V224H776m24-24H0V760a40,40,0,0,0,40,40H760a40,40,0,0,0,40-40V200Z" fill="#fff"/>
+          <rect class="cell-rect" x="672" y="252" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="48" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="152" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="256" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="360" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="464" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="568" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="672" y="356" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="48" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="152" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="256" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="360" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="464" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="568" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="672" y="460" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="48" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="152" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="256" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="360" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="464" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="568" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="672" y="564" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="48" y="668" width="80" height="80" fill="#fff"/>
+          <rect class="cell-rect" x="152" y="668" width="80" height="80" fill="#fff"/>
+        </g>
+      </defs>
+      <g id="g" data-name="g">
+        <g class="bundle">
+          <polygon points="800 176 0 176 0 56 72 56 72 104 168 104 168 56 632 56 632 104 728 104 728 56 800 56 800 176" fill="#fff"/>
+          <rect x="84" width="72" height="92" fill="#fff"/>
+          <rect x="644" width="72" height="92" fill="#fff"/>
+        </g>
+        <use xlink:href="#paper" class="second"/>
+        <use xlink:href="#paper" class="first"/>
+      </g>
+    </svg>
+    <script type="text/javascript">
+      setTimeout(()=>{
+        document.querySelector('#paper').classList.toggle('on')
+      },400)
+    </script>
+  </body>
+</html>
