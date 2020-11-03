@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/estimate.css">
+  </head>
+  <body>
+    <svg id="est" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 165">
+      <defs>
+        <g id="def">
+          <rect class="back" x="11" y="142" width="116" height="8" fill="#f00"/>
+          <path d="M201,4V161H39V4H201m4-4H35V165H205V0Z" transform="translate(-35)" fill="#383838"/>
+          <rect class="rect"  x="69" y="8" width="32" height="12" fill="#383838"/>
+          <rect class="rect" x="11" y="26" width="52" height="8" fill="#383838"/>
+          <rect class="rect" x="11" y="50" width="90" height="8" fill="#383838"/>
+          <g class="yen">
+            <path d="M48.71,35.52h1.77l3.35,5.19,3.35-5.19h1.76l-4,5.71H58.5v.92h-4v2h4v.93h-4v3.43H53.12V45.08h-4v-.93h4v-2h-4v-.92h3.56Z" transform="translate(-35)" fill="#383838"/>
+            <path d="M116.47,41.89h5.36V43.1h-5.36Z" transform="translate(-35)" fill="#383838"/>
+          </g>
+          <rect class="rect" x="11" y="66" width="40" height="12" fill="#383838"/>
+          <rect class="rect" x="11" y="82" width="40" height="12" fill="#383838"/>
+          <rect class="rect" x="11" y="98" width="40" height="12" fill="#383838"/>
+          <rect class="rect" x="55" y="66" width="40" height="12" fill="#383838"/>
+          <rect class="rect" x="55" y="82" width="40" height="12" fill="#383838"/>
+          <rect class="rect" x="55" y="98" width="40" height="12" fill="#383838"/>
+          <rect class="rect" x="99" y="66" width="24" height="12" fill="#383838"/>
+          <rect class="rect" x="99" y="82" width="24" height="12" fill="#383838"/>
+          <rect class="rect" x="99" y="98" width="24" height="12" fill="#383838"/>
+          <rect class="rect" x="127" y="66" width="32" height="12" fill="#383838"/>
+          <rect class="rect" x="127" y="82" width="32" height="12" fill="#383838"/>
+          <rect class="rect" x="127" y="98" width="32" height="12" fill="#383838"/>
+          <rect class="rect" x="99" y="114" width="24" height="12" fill="#383838"/>
+          <rect class="rect" x="127" y="114" width="32" height="12" fill="#383838"/>
+          <rect class="rect" x="11" y="130" width="116" height="8" fill="#383838"/>
+          <rect class="rect" x="11" y="142" width="116" height="8" fill="#383838"/>
+        </g>
+      </defs>
+      <use xlink:href="#def" class="first"/>
+      <use xlink:href="#def" class="second"/>
+    </svg>
+    <script type="text/javascript">
+      setTimeout(()=>{
+        document.querySelector('#def').classList.toggle('on')
+        document.querySelector('#est').classList.toggle('onn')
+      },400)
+    </script>
+  </body>
+</html>
