@@ -1,0 +1,274 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #FFF5CE;
+}
+
+body {
+  border: 10px solid white;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+
+svg {
+  overflow: visible;
+  font-size: 10px;
+}
+
+.shadow {
+  transform-origin: center center;
+  transform: rotateX(78deg) scale(0.8) translate(0.5em, -66em);
+  opacity: .4;
+  animation-name: shadow;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes shadow {
+  0% {
+    r: 10em;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+    opacity: .4;
+  }
+  25% {
+    r: 8em;
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+    opacity: .3;
+  }
+  50% {
+    r: 10em;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+    opacity: .4;
+  }
+  55% {
+    r: 9.5em;
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+    opacity: .37;
+  }
+  60% {
+    r: 10em;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+    opacity: .4;
+  }
+  100% {
+    r: 10em;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+    opacity: .4;
+  }
+}
+#basketWrapper {
+  animation-name: allBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.meron {
+  animation-name: meronBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes meronBounce {
+  5% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-2em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.pear {
+  animation-name: pearBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes pearBounce {
+  5% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-6em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.grape {
+  animation-name: grapeBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes grapeBounce {
+  5% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-10em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.grape {
+  animation-name: grapeBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes grapeBounce {
+  5% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-10em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.chestnuts {
+  animation-name: chestnutsBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes chestnutsBounce {
+  2% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-20em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.orange {
+  animation-name: orangeBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes orangeBounce {
+  2% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-35em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.persimmon {
+  animation-name: persimmonBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes persimmonBounce {
+  2% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-15em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.apple {
+  animation-name: appleBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes appleBounce {
+  2% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-20em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+.banana {
+  animation-name: bananaBounce;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bananaBounce {
+  2% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-10em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
+@keyframes allBounce {
+  0% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  25% {
+    transform: translateY(-10em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  50% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  55% {
+    transform: translateY(-2em);
+    animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  }
+  60% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+  100% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  }
+}
