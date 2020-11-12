@@ -1,0 +1,298 @@
+body{
+  margin: 0;
+  position: relative;
+  font-size: 10px;
+}
+svg{
+  overflow: visible;
+}
+*{
+  position: relative;
+}
+
+.lw{
+  transform: translate(-300px, 132px);
+}
+.line{
+  transform: scale(0.05) rotateX(3deg) rotateY(0deg) rotateZ(2deg) translate(-1418px, 0px);
+  &-wrap{
+    top: -1900vh;
+    transform: rotateX(6deg) rotateY(-22deg) rotate(-90deg) rotateY(64deg) translateY(0px);
+    perspective: 1200px;
+  }
+  @for $i from 1 through 7{
+    &-#{$i} {
+      animation:{
+        name: line-#{$i};
+        duration:.3s;
+        timing-function: linear;
+        iteration-count: infinite;
+      }
+      @keyframes line-#{$i} {
+        to{
+          y: #{720 + 240 * ($i - 1) }px;
+        }
+      }
+    }
+  }
+}
+.road{
+  top: -100vh;
+}
+.car{
+  top: -3800vh;
+  &-body{
+    animation:{
+      name: carBody;
+      duration: 2s;
+      delay: 0s;
+      iteration-count: infinite;
+    }
+    @keyframes carBody {
+      0%,30%,35%,50%,55%,100%{
+        transform: translate(0,0);
+      }
+      33%,53%{
+        transform: translate(0,-1em);
+      }
+    }
+  }
+}
+@keyframes tire{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.tire{
+  top: -3900vh;
+  &-back{
+    transform: rotate(0deg);
+    transform-origin: 61em 41em;
+    animation: {
+      name: tire;
+      duration: 2s;
+      timing-function: linear;
+      iteration-count: infinite;
+    }
+    &-wrap{
+      transform: rotateY(65deg) rotateX(20deg) scale(1.29) translate(-1328px, 961px);
+    }
+  }
+  &-front{
+    transform: rotate(0deg);
+    transform-origin: 81em 93.5em;
+    animation: {
+      name: tire;
+      duration: 2s;
+      timing-function: linear;
+      iteration-count: infinite;
+    }
+    &-wrap{
+      transform: rotateY(52deg) rotateX(18deg) scale(0.6) translate(-402px, 576px);
+    }
+  }
+}
+
+.effect{
+  top: -4010vh;
+}
+
+@mixin offset($dashstart,$i,$s,$m,$e,$second:3s) {
+  .efline-#{$i}{
+    stroke-dasharray: #{$dashstart};
+    stroke-dashoffset: #{$dashstart};
+    animation:{
+      name: efline#{$i};
+      duration: $second;
+      timing-function: linear;
+      iteration-count: infinite;
+    }
+  }
+  @keyframes efline#{$i}{
+    0%{
+      stroke-dashoffset: $dashstart;
+    }
+    #{$s}{
+      stroke-dashoffset: $dashstart;
+    }
+    #{$m}{
+      stroke-dashoffset: 0;
+    }
+    #{$e}{
+      stroke-dashoffset: -$dashstart;
+    }
+    100%{
+      stroke-dashoffset: -$dashstart;
+    }
+  }
+}
+
+@include offset(625,1,20%,24%,28%,1.2s);
+@include offset(463,2,40%,44%,48%,2s);
+@include offset(791,3,45%,49%,53%,3.5s);
+@include offset(1555,4,50%,54%,58%,4s);
+@include offset(932,5,22%,27%,32%);
+@include offset(932,6,70%,74%,78%);
+@include offset(860,7,80%,84%,88%);
+@include offset(932,8,90%,94%,98%);
+@include offset(950,9,10%,14%,18%);
+
+
+@mixin roffset($dashstart,$i,$s,$m,$e,$second:3s) {
+  .efrline-#{$i}{
+    stroke-dasharray: #{$dashstart};
+    stroke-dashoffset: #{$dashstart};
+    animation:{
+      name: efrline#{$i};
+      duration: $second;
+      timing-function: linear;
+      iteration-count: infinite;
+    }
+  }
+  @keyframes efrline#{$i}{
+    0%{
+      stroke-dashoffset: $dashstart;
+    }
+    #{$s}{
+      stroke-dashoffset: $dashstart;
+    }
+    #{$m}{
+      stroke-dashoffset: 0;
+    }
+    #{$e}{
+      stroke-dashoffset: -$dashstart;
+    }
+    100%{
+      stroke-dashoffset: -$dashstart;
+    }
+  }
+}
+@include roffset(3258,1,20%,24%,28%,5s);
+@include roffset(2663,2,40%,44%,48%,5s);
+@include roffset(2791,3,45%,49%,53%,4.5s);
+@include roffset(3555,4,50%,54%,58%,4.5s);
+@include roffset(2932,5,22%,27%,32%,4.2s);
+@include roffset(2932,6,70%,76%,82%,3.4s);
+@include roffset(2860,7,76%,84%,92%,2.8s);
+@include roffset(2951,8,80%,90%,100%,2.3s);
+@include roffset(3250,9,8%,15%,24%,2s);
+@include roffset(1850,10,1%,10%,20%,1.2s);
+
+.efroad{
+  top: -3700vh;
+}
+
+.sun{
+  transform: translate(7em, 173em)rotate(-84deg);
+  animation:{
+    name: sunMove;
+    duration: 13s;
+    timing-function: linear;
+    delay: 1s;
+    fill-mode: forwards;
+  }
+  @keyframes sunMove {
+    to{
+      transform: translate(7em, 173em)rotate(-50deg);
+      opacity: .2;
+    }
+  }
+}
+.cc{
+  top: -4115.6vh;
+  opacity: 0;
+  animation: {
+    name: ccOpacity,ccOpacity2;
+    duration: 4s,2s;
+    timing-function: linear;
+    delay: 3s,7s;
+    fill-mode: forwards;
+  }
+  @keyframes ccOpacity{
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes ccOpacity2{
+    0%,70%,72%,80%,82%,99%{
+      opacity: 1;
+    }
+    71%,81%,100%{
+      opacity: .95;
+    }
+  }
+  #lights,#fuz{
+    transform: translateY(3vh);
+    opacity: 0;
+    animation: {
+      name: lightOpacity,carlightBody;
+      duration: 2s,2s;
+      timing-function: linear,ease;
+      delay: 7s,1.9s;
+      fill-mode: forwards,none;
+      iteration-count: 1,infinite;
+    }
+    @keyframes lightOpacity{
+      0%,70%,72%,80%,82%,99%{
+        opacity: 0;
+      }
+      71%,81%,100%{
+        opacity: .7;
+      }
+    }
+    @keyframes carlightBody {
+      0%,30%,35%,50%,55%,100%{
+        transform: translateY(3vh);
+      }
+      33%,53%{
+        transform: translateY(calc(3vh - 1em));
+      }
+    }
+
+  }
+}
+#sky{
+  opacity: .3;
+  animation: {
+    name: skyOpacity;
+    duration: 5s;
+    timing-function: linear;
+    delay: 2s;
+    fill-mode: forwards;
+  }
+  @keyframes skyOpacity{
+    to{
+      opacity: .8;
+    }
+  }
+}
+#clouds{
+  animation: {
+    name: cts;
+    duration: 35s;
+    delay: 1s;
+    timing-function: linear;
+    fill-mode: forwards;
+  }
+  @keyframes cts{
+    to{
+      transform: translateX(-88em);
+    }
+  }
+}
+#cloudl{
+  animation: {
+    name: cts;
+    duration: 28s;
+    delay: 1s;
+    timing-function: linear;
+    fill-mode: forwards;
+  }
+  @keyframes cts{
+    to{
+      transform: translateX(-90em);
+    }
+  }}

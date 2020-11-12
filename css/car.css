@@ -1,0 +1,759 @@
+body {
+  margin: 0;
+  position: relative;
+  font-size: 10px;
+}
+
+svg {
+  overflow: visible;
+}
+
+* {
+  position: relative;
+}
+
+.lw {
+  transform: translate(-300px, 132px);
+}
+
+.line {
+  transform: scale(0.05) rotateX(3deg) rotateY(0deg) rotateZ(2deg) translate(-1418px, 0px);
+}
+.line-wrap {
+  top: -1900vh;
+  transform: rotateX(6deg) rotateY(-22deg) rotate(-90deg) rotateY(64deg) translateY(0px);
+  perspective: 1200px;
+}
+.line-1 {
+  animation-name: line-1;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-1 {
+  to {
+    y: 720px;
+  }
+}
+.line-2 {
+  animation-name: line-2;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-2 {
+  to {
+    y: 960px;
+  }
+}
+.line-3 {
+  animation-name: line-3;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-3 {
+  to {
+    y: 1200px;
+  }
+}
+.line-4 {
+  animation-name: line-4;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-4 {
+  to {
+    y: 1440px;
+  }
+}
+.line-5 {
+  animation-name: line-5;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-5 {
+  to {
+    y: 1680px;
+  }
+}
+.line-6 {
+  animation-name: line-6;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-6 {
+  to {
+    y: 1920px;
+  }
+}
+.line-7 {
+  animation-name: line-7;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes line-7 {
+  to {
+    y: 2160px;
+  }
+}
+.road {
+  top: -100vh;
+}
+
+.car {
+  top: -3800vh;
+}
+.car-body {
+  animation-name: carBody;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+@keyframes carBody {
+  0%,30%,35%,50%,55%,100% {
+    transform: translate(0, 0);
+  }
+  33%,53% {
+    transform: translate(0, -1em);
+  }
+}
+@keyframes tire {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.tire {
+  top: -3900vh;
+}
+.tire-back {
+  transform: rotate(0deg);
+  transform-origin: 61em 41em;
+  animation-name: tire;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.tire-back-wrap {
+  transform: rotateY(65deg) rotateX(20deg) scale(1.29) translate(-1328px, 961px);
+}
+.tire-front {
+  transform: rotate(0deg);
+  transform-origin: 81em 93.5em;
+  animation-name: tire;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.tire-front-wrap {
+  transform: rotateY(52deg) rotateX(18deg) scale(0.6) translate(-402px, 576px);
+}
+
+.effect {
+  top: -4010vh;
+}
+
+.efline-1 {
+  stroke-dasharray: 625;
+  stroke-dashoffset: 625;
+  animation-name: efline1;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline1 {
+  0% {
+    stroke-dashoffset: 625;
+  }
+  20% {
+    stroke-dashoffset: 625;
+  }
+  24% {
+    stroke-dashoffset: 0;
+  }
+  28% {
+    stroke-dashoffset: -625;
+  }
+  100% {
+    stroke-dashoffset: -625;
+  }
+}
+.efline-2 {
+  stroke-dasharray: 463;
+  stroke-dashoffset: 463;
+  animation-name: efline2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline2 {
+  0% {
+    stroke-dashoffset: 463;
+  }
+  40% {
+    stroke-dashoffset: 463;
+  }
+  44% {
+    stroke-dashoffset: 0;
+  }
+  48% {
+    stroke-dashoffset: -463;
+  }
+  100% {
+    stroke-dashoffset: -463;
+  }
+}
+.efline-3 {
+  stroke-dasharray: 791;
+  stroke-dashoffset: 791;
+  animation-name: efline3;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline3 {
+  0% {
+    stroke-dashoffset: 791;
+  }
+  45% {
+    stroke-dashoffset: 791;
+  }
+  49% {
+    stroke-dashoffset: 0;
+  }
+  53% {
+    stroke-dashoffset: -791;
+  }
+  100% {
+    stroke-dashoffset: -791;
+  }
+}
+.efline-4 {
+  stroke-dasharray: 1555;
+  stroke-dashoffset: 1555;
+  animation-name: efline4;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline4 {
+  0% {
+    stroke-dashoffset: 1555;
+  }
+  50% {
+    stroke-dashoffset: 1555;
+  }
+  54% {
+    stroke-dashoffset: 0;
+  }
+  58% {
+    stroke-dashoffset: -1555;
+  }
+  100% {
+    stroke-dashoffset: -1555;
+  }
+}
+.efline-5 {
+  stroke-dasharray: 932;
+  stroke-dashoffset: 932;
+  animation-name: efline5;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline5 {
+  0% {
+    stroke-dashoffset: 932;
+  }
+  22% {
+    stroke-dashoffset: 932;
+  }
+  27% {
+    stroke-dashoffset: 0;
+  }
+  32% {
+    stroke-dashoffset: -932;
+  }
+  100% {
+    stroke-dashoffset: -932;
+  }
+}
+.efline-6 {
+  stroke-dasharray: 932;
+  stroke-dashoffset: 932;
+  animation-name: efline6;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline6 {
+  0% {
+    stroke-dashoffset: 932;
+  }
+  70% {
+    stroke-dashoffset: 932;
+  }
+  74% {
+    stroke-dashoffset: 0;
+  }
+  78% {
+    stroke-dashoffset: -932;
+  }
+  100% {
+    stroke-dashoffset: -932;
+  }
+}
+.efline-7 {
+  stroke-dasharray: 860;
+  stroke-dashoffset: 860;
+  animation-name: efline7;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline7 {
+  0% {
+    stroke-dashoffset: 860;
+  }
+  80% {
+    stroke-dashoffset: 860;
+  }
+  84% {
+    stroke-dashoffset: 0;
+  }
+  88% {
+    stroke-dashoffset: -860;
+  }
+  100% {
+    stroke-dashoffset: -860;
+  }
+}
+.efline-8 {
+  stroke-dasharray: 932;
+  stroke-dashoffset: 932;
+  animation-name: efline8;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline8 {
+  0% {
+    stroke-dashoffset: 932;
+  }
+  90% {
+    stroke-dashoffset: 932;
+  }
+  94% {
+    stroke-dashoffset: 0;
+  }
+  98% {
+    stroke-dashoffset: -932;
+  }
+  100% {
+    stroke-dashoffset: -932;
+  }
+}
+.efline-9 {
+  stroke-dasharray: 950;
+  stroke-dashoffset: 950;
+  animation-name: efline9;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efline9 {
+  0% {
+    stroke-dashoffset: 950;
+  }
+  10% {
+    stroke-dashoffset: 950;
+  }
+  14% {
+    stroke-dashoffset: 0;
+  }
+  18% {
+    stroke-dashoffset: -950;
+  }
+  100% {
+    stroke-dashoffset: -950;
+  }
+}
+.efrline-1 {
+  stroke-dasharray: 3258;
+  stroke-dashoffset: 3258;
+  animation-name: efrline1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline1 {
+  0% {
+    stroke-dashoffset: 3258;
+  }
+  20% {
+    stroke-dashoffset: 3258;
+  }
+  24% {
+    stroke-dashoffset: 0;
+  }
+  28% {
+    stroke-dashoffset: -3258;
+  }
+  100% {
+    stroke-dashoffset: -3258;
+  }
+}
+.efrline-2 {
+  stroke-dasharray: 2663;
+  stroke-dashoffset: 2663;
+  animation-name: efrline2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline2 {
+  0% {
+    stroke-dashoffset: 2663;
+  }
+  40% {
+    stroke-dashoffset: 2663;
+  }
+  44% {
+    stroke-dashoffset: 0;
+  }
+  48% {
+    stroke-dashoffset: -2663;
+  }
+  100% {
+    stroke-dashoffset: -2663;
+  }
+}
+.efrline-3 {
+  stroke-dasharray: 2791;
+  stroke-dashoffset: 2791;
+  animation-name: efrline3;
+  animation-duration: 4.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline3 {
+  0% {
+    stroke-dashoffset: 2791;
+  }
+  45% {
+    stroke-dashoffset: 2791;
+  }
+  49% {
+    stroke-dashoffset: 0;
+  }
+  53% {
+    stroke-dashoffset: -2791;
+  }
+  100% {
+    stroke-dashoffset: -2791;
+  }
+}
+.efrline-4 {
+  stroke-dasharray: 3555;
+  stroke-dashoffset: 3555;
+  animation-name: efrline4;
+  animation-duration: 4.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline4 {
+  0% {
+    stroke-dashoffset: 3555;
+  }
+  50% {
+    stroke-dashoffset: 3555;
+  }
+  54% {
+    stroke-dashoffset: 0;
+  }
+  58% {
+    stroke-dashoffset: -3555;
+  }
+  100% {
+    stroke-dashoffset: -3555;
+  }
+}
+.efrline-5 {
+  stroke-dasharray: 2932;
+  stroke-dashoffset: 2932;
+  animation-name: efrline5;
+  animation-duration: 4.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline5 {
+  0% {
+    stroke-dashoffset: 2932;
+  }
+  22% {
+    stroke-dashoffset: 2932;
+  }
+  27% {
+    stroke-dashoffset: 0;
+  }
+  32% {
+    stroke-dashoffset: -2932;
+  }
+  100% {
+    stroke-dashoffset: -2932;
+  }
+}
+.efrline-6 {
+  stroke-dasharray: 2932;
+  stroke-dashoffset: 2932;
+  animation-name: efrline6;
+  animation-duration: 3.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline6 {
+  0% {
+    stroke-dashoffset: 2932;
+  }
+  70% {
+    stroke-dashoffset: 2932;
+  }
+  76% {
+    stroke-dashoffset: 0;
+  }
+  82% {
+    stroke-dashoffset: -2932;
+  }
+  100% {
+    stroke-dashoffset: -2932;
+  }
+}
+.efrline-7 {
+  stroke-dasharray: 2860;
+  stroke-dashoffset: 2860;
+  animation-name: efrline7;
+  animation-duration: 2.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline7 {
+  0% {
+    stroke-dashoffset: 2860;
+  }
+  76% {
+    stroke-dashoffset: 2860;
+  }
+  84% {
+    stroke-dashoffset: 0;
+  }
+  92% {
+    stroke-dashoffset: -2860;
+  }
+  100% {
+    stroke-dashoffset: -2860;
+  }
+}
+.efrline-8 {
+  stroke-dasharray: 2951;
+  stroke-dashoffset: 2951;
+  animation-name: efrline8;
+  animation-duration: 2.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline8 {
+  0% {
+    stroke-dashoffset: 2951;
+  }
+  80% {
+    stroke-dashoffset: 2951;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -2951;
+  }
+  100% {
+    stroke-dashoffset: -2951;
+  }
+}
+.efrline-9 {
+  stroke-dasharray: 3250;
+  stroke-dashoffset: 3250;
+  animation-name: efrline9;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline9 {
+  0% {
+    stroke-dashoffset: 3250;
+  }
+  8% {
+    stroke-dashoffset: 3250;
+  }
+  15% {
+    stroke-dashoffset: 0;
+  }
+  24% {
+    stroke-dashoffset: -3250;
+  }
+  100% {
+    stroke-dashoffset: -3250;
+  }
+}
+.efrline-10 {
+  stroke-dasharray: 1850;
+  stroke-dashoffset: 1850;
+  animation-name: efrline10;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes efrline10 {
+  0% {
+    stroke-dashoffset: 1850;
+  }
+  1% {
+    stroke-dashoffset: 1850;
+  }
+  10% {
+    stroke-dashoffset: 0;
+  }
+  20% {
+    stroke-dashoffset: -1850;
+  }
+  100% {
+    stroke-dashoffset: -1850;
+  }
+}
+.efroad {
+  top: -3700vh;
+}
+
+.sun {
+  transform: translate(7em, 173em) rotate(-84deg);
+  animation-name: sunMove;
+  animation-duration: 13s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes sunMove {
+  to {
+    transform: translate(7em, 173em) rotate(-50deg);
+    opacity: .2;
+  }
+}
+.cc {
+  top: -4115.6vh;
+  opacity: 0;
+  animation-name: ccOpacity,ccOpacity2;
+  animation-duration: 4s,2s;
+  animation-timing-function: linear;
+  animation-delay: 3s,7s;
+  animation-fill-mode: forwards;
+}
+@keyframes ccOpacity {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ccOpacity2 {
+  0%,70%,72%,80%,82%,99% {
+    opacity: 1;
+  }
+  71%,81%,100% {
+    opacity: .95;
+  }
+}
+.cc #lights, .cc #fuz {
+  transform: translateY(3vh);
+  opacity: 0;
+  animation-name: lightOpacity,carlightBody;
+  animation-duration: 2s,2s;
+  animation-timing-function: linear,ease;
+  animation-delay: 7s,1.9s;
+  animation-fill-mode: forwards,none;
+  animation-iteration-count: 1,infinite;
+}
+@keyframes lightOpacity {
+  0%,70%,72%,80%,82%,99% {
+    opacity: 0;
+  }
+  71%,81%,100% {
+    opacity: .7;
+  }
+}
+@keyframes carlightBody {
+  0%,30%,35%,50%,55%,100% {
+    transform: translateY(3vh);
+  }
+  33%,53% {
+    transform: translateY(calc(3vh - 1em));
+  }
+}
+#sky {
+  opacity: .3;
+  animation-name: skyOpacity;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes skyOpacity {
+  to {
+    opacity: .8;
+  }
+}
+#clouds {
+  animation-name: cts;
+  animation-duration: 35s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes cts {
+  to {
+    transform: translateX(-88em);
+  }
+}
+#cloudl {
+  animation-name: cts;
+  animation-duration: 28s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes cts {
+  to {
+    transform: translateX(-90em);
+  }
+}
