@@ -12,6 +12,14 @@ body {
   width: 65vw;
   height: 65vw;
 }
+body::after {
+  content: "ZATY";
+  font-size: 36px;
+  color: #fff;
+  position: absolute;
+  bottom: 23px;
+  right: 34px;
+}
 
 svg {
   overflow: visible;
