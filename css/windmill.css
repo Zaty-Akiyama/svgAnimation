@@ -1,0 +1,135 @@
+html {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  margin: 0;
+}
+
+svg {
+  overflow: visible;
+  font-size: 10px;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  transform: translate(-1em, 1em) scale(1.02);
+}
+
+#wing {
+  position: absolute;
+  top: 0;
+  transform: rotateY(43deg) scale(0.7) translate(40em, -10em);
+}
+#wing g {
+  transform-origin: center;
+  transform: rotate(0deg);
+  animation-name: wing;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes wing {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.winds {
+  position: relative;
+  top: -100em;
+  stroke-dasharray: 3800;
+  stroke-dashoffset: 3800;
+}
+.winds .first {
+  transform: translate(0em, -20em);
+  animation-name: firstPath;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes firstPath {
+  0% {
+    stroke-dashoffset: 3800;
+  }
+  10% {
+    stroke-dashoffset: 3800;
+  }
+  22% {
+    stroke-dashoffset: 0;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  28% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: -3800;
+  }
+  100% {
+    stroke-dashoffset: -3800;
+  }
+}
+.winds .second {
+  transform: translate(-30em, -40em) scale(0.8);
+  animation-name: secondPath;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes secondPath {
+  0% {
+    stroke-dashoffset: 3800;
+  }
+  30% {
+    stroke-dashoffset: 3800;
+  }
+  42% {
+    stroke-dashoffset: 0;
+  }
+  45% {
+    stroke-dashoffset: 0;
+  }
+  48% {
+    stroke-dashoffset: 0;
+  }
+  60% {
+    stroke-dashoffset: -3800;
+  }
+  100% {
+    stroke-dashoffset: -3800;
+  }
+}
+.winds .third {
+  transform: translate(-100em, -30em) scale(1.2);
+  animation-name: thirdPath;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes thirdPath {
+  0% {
+    stroke-dashoffset: 3800;
+  }
+  60% {
+    stroke-dashoffset: 3800;
+  }
+  72% {
+    stroke-dashoffset: 0;
+  }
+  75% {
+    stroke-dashoffset: 0;
+  }
+  78% {
+    stroke-dashoffset: 0;
+  }
+  90% {
+    stroke-dashoffset: -3800;
+  }
+  100% {
+    stroke-dashoffset: -3800;
+  }
+}

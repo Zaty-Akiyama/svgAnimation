@@ -1,0 +1,86 @@
+html{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+body{
+  margin: 0;
+}
+svg{
+  overflow: visible;
+  font-size: 10px;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  transform: translate(-1em,1em)scale(1.02);
+}
+#wing{
+  position: absolute;
+  top: 0;
+  transform: rotateY(43deg)scale(.7)translate(40em,-10em);
+  g{
+    transform-origin: center;
+    transform: rotate(0deg);
+    animation:{
+      name: wing;
+      duration: 5s;
+      timing-function: linear;
+      iteration-count: infinite;
+    }
+    @keyframes wing {
+      to{
+        transform: rotate(-360deg);
+      }
+    }
+  }
+}
+@mixin windPath($name,$start,$end){
+  animation:{
+    name:#{$name};
+    duration: 3.5s;
+    iteration-count: infinite;
+    timing-function: linear;
+  }
+  @keyframes #{$name}{
+    0%{
+      stroke-dashoffset: 3800;
+    }
+    #{$start}%{
+      stroke-dashoffset: 3800;
+    }
+    #{$start + ($end - $start)/2 - 3}%{
+      stroke-dashoffset: 0;
+    }
+    #{$start + ($end - $start)/2}%{
+      stroke-dashoffset: 0;
+    }
+    #{$start + ($end - $start)/2 + 3}%{
+      stroke-dashoffset: 0;
+    }
+    #{$end}%{
+      stroke-dashoffset: -3800;
+    }
+    100%{
+      stroke-dashoffset: -3800;
+    }
+  }
+}
+.winds{
+  position: relative;
+  top: -100em;
+  stroke-dasharray: 3800;
+  stroke-dashoffset: 3800;
+  .first{
+    transform: translate(0em,-20em);
+    @include windPath(firstPath,10,40);
+  }
+  .second{
+    transform: translate(-30em,-40em)scale(.8);
+    @include windPath(secondPath,30,60);
+  }
+  .third{
+    transform: translate(-100em,-30em)scale(1.2);
+    @include windPath(thirdPath,60,90);
+  }
+}
