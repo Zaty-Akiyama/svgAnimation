@@ -5,6 +5,14 @@ html{
 }
 body{
   margin: 0;
+  &::after{
+    position: absolute;
+    content: 'ZATY.jp';
+    color: #fff;
+    bottom: 0;
+    right: .3em;
+    font-size: 30px;
+  }
 }
 svg{
   overflow: visible;
@@ -73,7 +81,7 @@ svg{
   stroke-dashoffset: 3800;
   .first{
     transform: translate(0em,-20em);
-    @include windPath(firstPath,10,40);
+    @include windPath(firstPath,0,30);
   }
   .second{
     transform: translate(-30em,-40em)scale(.8);
@@ -81,6 +89,6 @@ svg{
   }
   .third{
     transform: translate(-100em,-30em)scale(1.2);
-    @include windPath(thirdPath,60,90);
+    @include windPath(thirdPath,70,100);
   }
 }
