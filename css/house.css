@@ -1,0 +1,239 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0E0E0E;
+}
+
+body {
+  border: 10px solid white;
+  padding: 4vw;
+  width: 87vw;
+  height: 87vw;
+}
+body::after {
+  content: "ZATY.jp";
+  font-size: 36px;
+  color: #fff;
+  position: absolute;
+  bottom: 23px;
+  right: 34px;
+}
+
+svg {
+  overflow: visible;
+  font-size: 10px;
+  fill: #fff;
+}
+svg #ani ellipse {
+  stroke: #fff;
+}
+
+.one {
+  animation-name: one;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes one {
+  0%,100% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(0em, 0em);
+    stroke-width: 10;
+  }
+  25% {
+    cx: 855.33;
+    cy: 588.56;
+    rx: 82.64;
+    ry: 52.56;
+    transform: translate(0em, 0em);
+    stroke-width: 15;
+  }
+  50% {
+    cx: 1146.57;
+    cy: 444.28;
+    rx: 115.85;
+    ry: 73.67;
+    transform: translate(0em, 0em);
+    opacity: .8;
+    stroke-width: 20;
+  }
+  75% {
+    cx: 1620.89;
+    cy: 330.74;
+    rx: 209.11;
+    ry: 145.26;
+    transform: translate(0em, 0em);
+    opacity: 0;
+    stroke-width: 25;
+  }
+  95% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(-1em, 12em);
+    opacity: 0;
+    stroke-width: 1;
+  }
+}
+.two {
+  animation-name: two;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes two {
+  0%,100% {
+    cx: 855.33;
+    cy: 588.56;
+    rx: 82.64;
+    ry: 52.56;
+    transform: translate(0em, 0em);
+    stroke-width: 15;
+  }
+  25% {
+    cx: 1146.57;
+    cy: 444.28;
+    rx: 115.85;
+    ry: 73.67;
+    transform: translate(0em, 0em);
+    opacity: .8;
+    stroke-width: 20;
+  }
+  50% {
+    cx: 1620.89;
+    cy: 330.74;
+    rx: 209.11;
+    ry: 145.26;
+    transform: translate(0em, 0em);
+    opacity: 0;
+    stroke-width: 25;
+  }
+  70% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(-1em, 12em);
+    opacity: 0;
+    stroke-width: 1;
+  }
+  75% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(0em, 0em);
+    opacity: 1;
+    stroke-width: 10;
+  }
+}
+.three {
+  animation-name: three;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes three {
+  75% {
+    cx: 855.33;
+    cy: 588.56;
+    rx: 82.64;
+    ry: 52.56;
+    transform: translate(0em, 0em);
+    stroke-width: 15;
+  }
+  0%,100% {
+    cx: 1146.57;
+    cy: 444.28;
+    rx: 115.85;
+    ry: 73.67;
+    transform: translate(0em, 0em);
+    opacity: .8;
+    stroke-width: 20;
+  }
+  25% {
+    cx: 1620.89;
+    cy: 330.74;
+    rx: 209.11;
+    ry: 145.26;
+    transform: translate(0em, 0em);
+    opacity: 0;
+    stroke-width: 25;
+  }
+  45% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(-1em, 12em);
+    opacity: 0;
+    stroke-width: 1;
+  }
+  50% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(0em, 0em);
+    opacity: 1;
+    stroke-width: 10;
+  }
+}
+.four {
+  animation-name: four;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes four {
+  50% {
+    cx: 855.33;
+    cy: 588.56;
+    rx: 82.64;
+    ry: 52.56;
+    transform: translate(0em, 0em);
+    stroke-width: 15;
+  }
+  75% {
+    cx: 1146.57;
+    cy: 444.28;
+    rx: 115.85;
+    ry: 73.67;
+    transform: translate(0em, 0em);
+    opacity: .8;
+    stroke-width: 20;
+  }
+  0%,100% {
+    cx: 1620.89;
+    cy: 330.74;
+    rx: 209.11;
+    ry: 145.26;
+    transform: translate(0em, 0em);
+    opacity: 0;
+    stroke-width: 25;
+  }
+  20% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(-1em, 12em);
+    opacity: 0;
+    stroke-width: 1;
+  }
+  25% {
+    cx: 680.87;
+    cy: 690;
+    rx: 53.87;
+    ry: 31;
+    transform: translate(0em, 0em);
+    opacity: 1;
+    stroke-width: 10;
+  }
+}
