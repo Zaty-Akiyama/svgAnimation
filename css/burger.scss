@@ -1,0 +1,344 @@
+$second: 0.1s;
+$potatoSecond: 0.06s;
+$burgerSecond: 0.16s;
+html{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  &::after{
+    content: "ZATY.jp";
+    font-size: 32px;
+    color: #0a0a0a;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
+}
+body{
+  margin: 0;
+  position: relative;
+  font-size: 10px;
+}
+svg{
+  overflow: visible;
+  height: 100vh;
+  left: -165px;
+}
+*{
+  position: relative;
+}
+.con{
+}
+.belt-wrap{
+  transform: perspective(50em) rotateX(45deg);
+  top: -98.8em;
+}
+.burger{
+  width: 50em;
+  height: 50em;
+  left: 25em;
+  top: -178em;
+  &-dish{
+    transform: translateX(215em);
+  }
+  &-main{
+    transform: translateY(-143em);
+  }
+}
+.potatoes{
+  width: 30em;
+  height: 30em;
+  left: -16em;
+  top: -189.5em;
+}
+.cup{
+  transform: translateX(145em);
+}
+.potato-group{
+  transform: translateY(-140em);
+}
+.gear{
+  &-first{
+    transform: translate(-77.2em,42.6em);
+  }
+  &-second{
+    transform: translate(-3em,42.6em);
+  }
+  &-third{
+    transform: translate(71.2em,42.6em);
+  }
+}
+
+.in{
+  .belt{
+    animation:{
+      name: beltIn;
+      duration: $second;
+      iteration-count: 21;
+      timing-function: linear;
+    }
+    @keyframes beltIn{
+      to{
+        transform: translateX(-5em);
+      }
+    }
+  }
+  .gearWrap{
+    transform-origin: center;
+    animation:{
+      name: gearIn;
+      duration: $second;
+      iteration-count: 21;
+      timing-function: linear;
+    }
+    @keyframes gearIn{
+      to{
+        transform: rotate(-23deg);
+      }
+    }
+  }
+  #rote-2{
+    rect{
+      stroke-dashoffset:0;
+      animation:{
+        name: rote2In;
+        duration: $second;
+        iteration-count: 21;
+        timing-function: linear;
+      }
+      @keyframes rote2In{
+        to{
+          stroke-dashoffset:60;
+        }
+      }
+    }
+  }
+  .burger-dish{
+    animation: {
+      name: dishIn;
+      duration: $second*21;
+      timing-function: linear;
+      fill-mode: forwards;
+    }
+    @keyframes dishIn{
+      from{
+        transform: translateX(215em);
+      }
+      to{
+        transform: translateX(72em);
+      }
+    }
+  }
+  .cup{
+    animation: {
+      name: cupIn;
+      duration: $second*21;
+      timing-function: linear;
+      fill-mode: forwards;
+    }
+    @keyframes cupIn{
+      from{
+        transform: translateX(145em);
+      }
+      to{
+        transform: translateX(0em);
+      }
+    }
+  }
+  .potato-group{
+    @for $i from 1 to 32{
+      polygon:nth-of-type(#{$i}){
+        animation: {
+          name: potatoIn#{$i};
+          duration: $potatoSecond;
+          delay: $potatoSecond*$i/2.5 + $second*21;
+          timing-function: linear;
+          fill-mode: forwards;
+        }
+        @keyframes potatoIn#{$i}{
+          from{
+            transform: translateY(0em);
+          }
+          to{
+            transform: translateY(140em);
+          }
+        }
+      }
+    }
+  }
+}
+.move{
+  .belt{
+    animation:{
+      name: beltMove;
+      duration: $second;
+      iteration-count: 10;
+      timing-function: linear;
+    }
+    @keyframes beltMove{
+      to{
+        transform: translateX(-5em);
+      }
+    }
+  }
+  .gearWrap{
+    transform-origin: center;
+    animation:{
+      name: gearMove;
+      duration: $second;
+      iteration-count: 10;
+      timing-function: linear;
+    }
+    @keyframes gearMove{
+      to{
+        transform: rotate(-23deg);
+      }
+    }
+  }
+  #rote-2{
+    rect{
+      stroke-dashoffset:0;
+      animation:{
+        name: rote2Move;
+        duration: $second;
+        iteration-count: 10;
+        timing-function: linear;
+      }
+      @keyframes rote2Move{
+        to{
+          stroke-dashoffset:60;
+        }
+      }
+    }
+  }
+  .burger-dish{
+    animation: {
+      name: dishMove;
+      duration: $second*10;
+      timing-function: linear;
+      fill-mode: forwards;
+    }
+    @keyframes dishMove{
+      from{
+        transform: translateX(72em);
+      }
+      to{
+        transform: translateX(0em);
+      }
+    }
+  }
+  .potatoes{
+    animation: {
+      name: potatoesMove;
+      duration: $second*10;
+      timing-function: linear;
+      fill-mode: forwards;
+    }
+    @keyframes potatoesMove{
+      from{
+        transform: translateX(0em);
+      }
+      to{
+        transform: translateX(-30em);
+      }
+    }
+  }
+  .burger-main{
+    @for $i from 1 to 7{
+      g:nth-of-type(#{$i}){
+        animation: {
+          name: potatoIn#{$i};
+          duration: $burgerSecond;
+          delay: $burgerSecond*$i/1.2 + $second*10;
+          timing-function: linear;
+          fill-mode: forwards;
+        }
+        @keyframes potatoIn#{$i}{
+          from{
+            transform: translateY(0em);
+          }
+          to{
+            transform: translateY(143em);
+          }
+        }
+      }
+    }
+  }
+}
+.out{
+  .belt{
+    animation:{
+      name: beltOut;
+      duration: $second;
+      iteration-count: 26;
+      timing-function: linear;
+    }
+    @keyframes beltOut{
+      to{
+        transform: translateX(-5em);
+      }
+    }
+  }
+  .gearWrap{
+    transform-origin: center;
+    animation:{
+      name: gearOut;
+      duration: $second;
+      iteration-count: 26;
+      timing-function: linear;
+    }
+    @keyframes gearOut{
+      to{
+        transform: rotate(-23deg);
+      }
+    }
+  }
+  #rote-2{
+    rect{
+      stroke-dashoffset:0;
+      animation:{
+        name: rote2Out;
+        duration: $second;
+        iteration-count: 26;
+        timing-function: linear;
+      }
+      @keyframes rote2Out{
+        to{
+          stroke-dashoffset:60;
+        }
+      }
+    }
+  }
+  .burger{
+    animation: {
+      name: burgerOut;
+      duration: $second*26.5;
+      timing-function: linear;
+      fill-mode: forwards;
+    }
+    @keyframes burgerOut{
+      from{
+        transform: translateX(0em);
+      }
+      to{
+        transform: translateX(-75em);
+      }
+    }
+  }
+  .potatoes{
+    animation: {
+      name: potatoesOut;
+      duration: $second*26.5;
+      timing-function: linear;
+      fill-mode: forwards;
+    }
+    @keyframes potatoesOut{
+      from{
+        transform: translateX(-30em);
+      }
+      to{
+        transform: translateX(-105em);
+      }
+    }
+  }
+}

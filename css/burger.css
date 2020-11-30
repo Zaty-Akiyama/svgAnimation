@@ -1,0 +1,817 @@
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+html::after {
+  content: "ZATY.jp";
+  font-size: 32px;
+  color: #0a0a0a;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-size: 10px;
+}
+
+svg {
+  overflow: visible;
+  height: 100vh;
+  left: -165px;
+}
+
+* {
+  position: relative;
+}
+
+.belt-wrap {
+  transform: perspective(50em) rotateX(45deg);
+  top: -98.8em;
+}
+
+.burger {
+  width: 50em;
+  height: 50em;
+  left: 25em;
+  top: -178em;
+}
+.burger-dish {
+  transform: translateX(215em);
+}
+.burger-main {
+  transform: translateY(-143em);
+}
+
+.potatoes {
+  width: 30em;
+  height: 30em;
+  left: -16em;
+  top: -189.5em;
+}
+
+.cup {
+  transform: translateX(145em);
+}
+
+.potato-group {
+  transform: translateY(-140em);
+}
+
+.gear-first {
+  transform: translate(-77.2em, 42.6em);
+}
+.gear-second {
+  transform: translate(-3em, 42.6em);
+}
+.gear-third {
+  transform: translate(71.2em, 42.6em);
+}
+
+.in .belt {
+  animation-name: beltIn;
+  animation-duration: 0.1s;
+  animation-iteration-count: 21;
+  animation-timing-function: linear;
+}
+@keyframes beltIn {
+  to {
+    transform: translateX(-5em);
+  }
+}
+.in .gearWrap {
+  transform-origin: center;
+  animation-name: gearIn;
+  animation-duration: 0.1s;
+  animation-iteration-count: 21;
+  animation-timing-function: linear;
+}
+@keyframes gearIn {
+  to {
+    transform: rotate(-23deg);
+  }
+}
+.in #rote-2 rect {
+  stroke-dashoffset: 0;
+  animation-name: rote2In;
+  animation-duration: 0.1s;
+  animation-iteration-count: 21;
+  animation-timing-function: linear;
+}
+@keyframes rote2In {
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+.in .burger-dish {
+  animation-name: dishIn;
+  animation-duration: 2.1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes dishIn {
+  from {
+    transform: translateX(215em);
+  }
+  to {
+    transform: translateX(72em);
+  }
+}
+.in .cup {
+  animation-name: cupIn;
+  animation-duration: 2.1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes cupIn {
+  from {
+    transform: translateX(145em);
+  }
+  to {
+    transform: translateX(0em);
+  }
+}
+.in .potato-group polygon:nth-of-type(1) {
+  animation-name: potatoIn1;
+  animation-duration: 0.06s;
+  animation-delay: 2.124s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn1 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(2) {
+  animation-name: potatoIn2;
+  animation-duration: 0.06s;
+  animation-delay: 2.148s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn2 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(3) {
+  animation-name: potatoIn3;
+  animation-duration: 0.06s;
+  animation-delay: 2.172s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn3 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(4) {
+  animation-name: potatoIn4;
+  animation-duration: 0.06s;
+  animation-delay: 2.196s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn4 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(5) {
+  animation-name: potatoIn5;
+  animation-duration: 0.06s;
+  animation-delay: 2.22s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn5 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(6) {
+  animation-name: potatoIn6;
+  animation-duration: 0.06s;
+  animation-delay: 2.244s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn6 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(7) {
+  animation-name: potatoIn7;
+  animation-duration: 0.06s;
+  animation-delay: 2.268s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn7 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(8) {
+  animation-name: potatoIn8;
+  animation-duration: 0.06s;
+  animation-delay: 2.292s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn8 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(9) {
+  animation-name: potatoIn9;
+  animation-duration: 0.06s;
+  animation-delay: 2.316s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn9 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(10) {
+  animation-name: potatoIn10;
+  animation-duration: 0.06s;
+  animation-delay: 2.34s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn10 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(11) {
+  animation-name: potatoIn11;
+  animation-duration: 0.06s;
+  animation-delay: 2.364s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn11 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(12) {
+  animation-name: potatoIn12;
+  animation-duration: 0.06s;
+  animation-delay: 2.388s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn12 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(13) {
+  animation-name: potatoIn13;
+  animation-duration: 0.06s;
+  animation-delay: 2.412s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn13 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(14) {
+  animation-name: potatoIn14;
+  animation-duration: 0.06s;
+  animation-delay: 2.436s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn14 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(15) {
+  animation-name: potatoIn15;
+  animation-duration: 0.06s;
+  animation-delay: 2.46s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn15 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(16) {
+  animation-name: potatoIn16;
+  animation-duration: 0.06s;
+  animation-delay: 2.484s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn16 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(17) {
+  animation-name: potatoIn17;
+  animation-duration: 0.06s;
+  animation-delay: 2.508s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn17 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(18) {
+  animation-name: potatoIn18;
+  animation-duration: 0.06s;
+  animation-delay: 2.532s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn18 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(19) {
+  animation-name: potatoIn19;
+  animation-duration: 0.06s;
+  animation-delay: 2.556s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn19 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(20) {
+  animation-name: potatoIn20;
+  animation-duration: 0.06s;
+  animation-delay: 2.58s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn20 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(21) {
+  animation-name: potatoIn21;
+  animation-duration: 0.06s;
+  animation-delay: 2.604s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn21 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(22) {
+  animation-name: potatoIn22;
+  animation-duration: 0.06s;
+  animation-delay: 2.628s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn22 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(23) {
+  animation-name: potatoIn23;
+  animation-duration: 0.06s;
+  animation-delay: 2.652s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn23 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(24) {
+  animation-name: potatoIn24;
+  animation-duration: 0.06s;
+  animation-delay: 2.676s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn24 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(25) {
+  animation-name: potatoIn25;
+  animation-duration: 0.06s;
+  animation-delay: 2.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn25 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(26) {
+  animation-name: potatoIn26;
+  animation-duration: 0.06s;
+  animation-delay: 2.724s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn26 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(27) {
+  animation-name: potatoIn27;
+  animation-duration: 0.06s;
+  animation-delay: 2.748s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn27 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(28) {
+  animation-name: potatoIn28;
+  animation-duration: 0.06s;
+  animation-delay: 2.772s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn28 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(29) {
+  animation-name: potatoIn29;
+  animation-duration: 0.06s;
+  animation-delay: 2.796s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn29 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(30) {
+  animation-name: potatoIn30;
+  animation-duration: 0.06s;
+  animation-delay: 2.82s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn30 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.in .potato-group polygon:nth-of-type(31) {
+  animation-name: potatoIn31;
+  animation-duration: 0.06s;
+  animation-delay: 2.844s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn31 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(140em);
+  }
+}
+.move .belt {
+  animation-name: beltMove;
+  animation-duration: 0.1s;
+  animation-iteration-count: 10;
+  animation-timing-function: linear;
+}
+@keyframes beltMove {
+  to {
+    transform: translateX(-5em);
+  }
+}
+.move .gearWrap {
+  transform-origin: center;
+  animation-name: gearMove;
+  animation-duration: 0.1s;
+  animation-iteration-count: 10;
+  animation-timing-function: linear;
+}
+@keyframes gearMove {
+  to {
+    transform: rotate(-23deg);
+  }
+}
+.move #rote-2 rect {
+  stroke-dashoffset: 0;
+  animation-name: rote2Move;
+  animation-duration: 0.1s;
+  animation-iteration-count: 10;
+  animation-timing-function: linear;
+}
+@keyframes rote2Move {
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+.move .burger-dish {
+  animation-name: dishMove;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes dishMove {
+  from {
+    transform: translateX(72em);
+  }
+  to {
+    transform: translateX(0em);
+  }
+}
+.move .potatoes {
+  animation-name: potatoesMove;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoesMove {
+  from {
+    transform: translateX(0em);
+  }
+  to {
+    transform: translateX(-30em);
+  }
+}
+.move .burger-main g:nth-of-type(1) {
+  animation-name: potatoIn1;
+  animation-duration: 0.16s;
+  animation-delay: 1.13333s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn1 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(143em);
+  }
+}
+.move .burger-main g:nth-of-type(2) {
+  animation-name: potatoIn2;
+  animation-duration: 0.16s;
+  animation-delay: 1.26667s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn2 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(143em);
+  }
+}
+.move .burger-main g:nth-of-type(3) {
+  animation-name: potatoIn3;
+  animation-duration: 0.16s;
+  animation-delay: 1.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn3 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(143em);
+  }
+}
+.move .burger-main g:nth-of-type(4) {
+  animation-name: potatoIn4;
+  animation-duration: 0.16s;
+  animation-delay: 1.53333s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn4 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(143em);
+  }
+}
+.move .burger-main g:nth-of-type(5) {
+  animation-name: potatoIn5;
+  animation-duration: 0.16s;
+  animation-delay: 1.66667s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn5 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(143em);
+  }
+}
+.move .burger-main g:nth-of-type(6) {
+  animation-name: potatoIn6;
+  animation-duration: 0.16s;
+  animation-delay: 1.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoIn6 {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(143em);
+  }
+}
+.out .belt {
+  animation-name: beltOut;
+  animation-duration: 0.1s;
+  animation-iteration-count: 26;
+  animation-timing-function: linear;
+}
+@keyframes beltOut {
+  to {
+    transform: translateX(-5em);
+  }
+}
+.out .gearWrap {
+  transform-origin: center;
+  animation-name: gearOut;
+  animation-duration: 0.1s;
+  animation-iteration-count: 26;
+  animation-timing-function: linear;
+}
+@keyframes gearOut {
+  to {
+    transform: rotate(-23deg);
+  }
+}
+.out #rote-2 rect {
+  stroke-dashoffset: 0;
+  animation-name: rote2Out;
+  animation-duration: 0.1s;
+  animation-iteration-count: 26;
+  animation-timing-function: linear;
+}
+@keyframes rote2Out {
+  to {
+    stroke-dashoffset: 60;
+  }
+}
+.out .burger {
+  animation-name: burgerOut;
+  animation-duration: 2.65s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes burgerOut {
+  from {
+    transform: translateX(0em);
+  }
+  to {
+    transform: translateX(-75em);
+  }
+}
+.out .potatoes {
+  animation-name: potatoesOut;
+  animation-duration: 2.65s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes potatoesOut {
+  from {
+    transform: translateX(-30em);
+  }
+  to {
+    transform: translateX(-105em);
+  }
+}
