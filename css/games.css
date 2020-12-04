@@ -1,0 +1,194 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0E0E0E;
+}
+
+body {
+  border: 10px solid white;
+  padding: 20vw;
+  width: 55vw;
+  height: 55vw;
+  overflow: hidden;
+}
+body::after {
+  content: "ZATY.jp";
+  font-size: 36px;
+  color: #fff;
+  position: absolute;
+  bottom: 23px;
+  right: 34px;
+}
+
+svg {
+  overflow: visible;
+  font-size: 10px;
+}
+svg * {
+  stroke: white;
+}
+
+.right-button circle, .left-button polygon, .select-button rect {
+  fill: white;
+}
+
+.right-button circle:nth-of-type(1), .right-button polygon:nth-of-type(1), .left-button circle:nth-of-type(1), .left-button polygon:nth-of-type(1) {
+  opacity: 0;
+  animation-name: button1;
+  animation-duration: .1s;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes button1 {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+.right-button circle:nth-of-type(2), .right-button polygon:nth-of-type(2), .left-button circle:nth-of-type(2), .left-button polygon:nth-of-type(2) {
+  opacity: 0;
+  animation-name: button2;
+  animation-duration: .1s;
+  animation-delay: 2.9s;
+  animation-fill-mode: forwards;
+}
+@keyframes button2 {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+.right-button circle:nth-of-type(3), .right-button polygon:nth-of-type(3), .left-button circle:nth-of-type(3), .left-button polygon:nth-of-type(3) {
+  opacity: 0;
+  animation-name: button3;
+  animation-duration: .1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes button3 {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+.right-button circle:nth-of-type(4), .right-button polygon:nth-of-type(4), .left-button circle:nth-of-type(4), .left-button polygon:nth-of-type(4) {
+  opacity: 0;
+  animation-name: button4;
+  animation-duration: .1s;
+  animation-delay: 3.1s;
+  animation-fill-mode: forwards;
+}
+@keyframes button4 {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+.game-body {
+  stroke: #0E0E0E;
+  fill: #0E0E0E;
+  animation-name: body;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes body {
+  to {
+    stroke: white;
+  }
+}
+.r-button, .l-button {
+  transform: translateY(5em);
+  animation-name: button,buttonAfter,buttonAfter;
+  animation-duration: .2s,.4s,.4s;
+  animation-delay: 2s,4s,4.4s;
+  animation-fill-mode: forwards;
+}
+@keyframes button {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes buttonAfter {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.r-button {
+  animation-delay: 2.1s,4.2s,4.6s;
+}
+
+.button-circle-1, .button-circle-2 {
+  stroke-dasharray: 630;
+  stroke-dashoffset: 630;
+  animation-name: buttonCircle;
+  animation-duration: .3s;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes buttonCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.button-circle-1 {
+  animation-delay: 2.5s;
+}
+
+.select-button rect, .center {
+  opacity: 0;
+  animation-name: opa;
+  animation-duration: .3s;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes opa {
+  to {
+    opacity: 1;
+  }
+}
+.select-button rect:nth-of-type(1) {
+  animation-delay: 3.4s;
+}
+.select-button rect:nth-of-type(2) {
+  animation-delay: 3.5s;
+}
+
+.cord {
+  transform: translateY(2px);
+  stroke-dasharray: 580;
+  stroke-dashoffset: 580;
+  animation-name: cord;
+  animation-duration: .3s;
+  animation-delay: 3.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes cord {
+  to {
+    stroke-dasharray: 1060;
+  }
+}
