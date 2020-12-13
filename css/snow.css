@@ -1,0 +1,215 @@
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-size: 10px;
+  background: #ceccdc;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+svg {
+  overflow: visible;
+  height: 100vh;
+}
+
+* {
+  position: relative;
+}
+
+#l3 {
+  opacity: .8;
+}
+
+@keyframes drop1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40vw 80vw;
+  }
+}
+@keyframes drop1wrap {
+  0% {
+    left: 0vw;
+    top: 0;
+  }
+  25% {
+    left: -4vw;
+    top: 2vw;
+  }
+  50% {
+    left: 0vw;
+    top: 0;
+  }
+  75% {
+    left: -3vw;
+    top: 3vw;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+@keyframes drop2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0vw 40vw;
+  }
+}
+@keyframes drop2wrap {
+  0% {
+    left: 0vw;
+  }
+  25% {
+    left: -4vw;
+  }
+  50% {
+    left: 0vw;
+  }
+  75% {
+    left: 4vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes drop3 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -50vw 100vw;
+  }
+}
+.snow1 {
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  background-image: url("../snow/snow1.svg");
+  background-repeat: repeat;
+  background-size: 40vw 40vw;
+  animation-name: drop1;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snow1-wrap {
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  animation-name: drop1wrap;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.snow2 {
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  background-image: url("../snow/snow2.svg");
+  background-repeat: repeat;
+  background-size: 40vw 40vw;
+  animation-name: drop2;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snow2-wrap {
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  animation-name: drop2wrap;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.snow3 {
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  opacity: .6;
+  background-image: url("../snow/snow2.svg");
+  background-repeat: repeat;
+  background-size: 50vw 50vw;
+  animation-name: drop3;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snow3-wrap {
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+}
+
+@keyframes lumpLeft {
+  0%,40%,47%,50%,57%,100% {
+    fill: #ff4766;
+  }
+  43%,53% {
+    fill: #b3b3b3;
+  }
+}
+@keyframes lumpRight {
+  0%,40%,47%,50%,57%,100% {
+    fill: #4586ff;
+  }
+  43%,53% {
+    fill: #b3b3b3;
+  }
+}
+@keyframes eye {
+  0%,50%,59%,100% {
+    fill: #ffff00;
+  }
+  54% {
+    fill: #f2f2f2;
+  }
+}
+.lump-left {
+  animation-name: lumpLeft;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+.lump-right {
+  animation-name: lumpRight;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.eye {
+  transition: 1s;
+  fill: #ffff9d;
+  animation-name: eye;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
