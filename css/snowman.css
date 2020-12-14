@@ -1,0 +1,429 @@
+* {
+  position: relative;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #bcbce8;
+}
+html::after {
+  content: "ZATY.jp";
+  font-size: 40px;
+  color: #0a0a0a;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+}
+
+body {
+  border: 10px solid white;
+  padding: 0vw;
+  width: 95vw;
+  height: 95vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+svg {
+  transform: scale(1.3);
+  transform-origin: center;
+}
+
+@keyframes setBody {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes setShadow {
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes jumpHead {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-13vw);
+  }
+}
+@keyframes jumpHeadShadow {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes jumpHeadBottom {
+  0% {
+    transform: translateY(-13vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes jumpHeadShadowBottom {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes jumpBody2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-9vw);
+  }
+}
+@keyframes jumpBody2Shadow {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes jumpBody2Bottom {
+  0% {
+    transform: translateY(-9vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes jumpBody2ShadowBottom {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes jumpBody1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5vw);
+  }
+}
+@keyframes jumpBody1Bottom {
+  0% {
+    transform: translateY(-5vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes circle {
+  from {
+    r: 0;
+  }
+  to {
+    r: 4.5;
+  }
+}
+@keyframes jumpAction {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes blink {
+  0%,30%,40%,50%,60%,100% {
+    transform: scaleY(1);
+  }
+  35%,55% {
+    transform: scaleY(0.2);
+  }
+}
+.start .arm-right {
+  transform: scale(0.3);
+  transform-origin: center;
+}
+.start .arm-left {
+  transform: scaleX(0.3) scaleY(0.3);
+  transform-origin: 22em 26em;
+}
+.start .cal {
+  transform: scaleX(0.3);
+  transform-origin: 26em;
+}
+.start .circle1, .start .circle2, .start .circle3, .start .circle4, .start .circle5 {
+  r: 0;
+}
+.start .hat {
+  transform: translateY(-40vh);
+}
+.start #head {
+  transform: translateY(-60vw);
+  animation-name: setBody;
+  animation-duration: 1.3s;
+  animation-delay: .4s;
+  animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.start .head-shadow {
+  opacity: 0;
+  animation-name: setShadow;
+  animation-duration: 1.3s;
+  animation-delay: .4s;
+  animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.start #body1 {
+  transform: translateY(-60vw);
+  animation-name: setBody;
+  animation-duration: 1.3s;
+  animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.start #body2 {
+  transform: translateY(-60vw);
+  animation-name: setBody;
+  animation-duration: 1.3s;
+  animation-delay: .2s;
+  animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.start .body2-shadow {
+  opacity: 0;
+  animation-name: setShadow;
+  animation-duration: 1.3s;
+  animation-delay: .2s;
+  animation-timing-function: cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.start .circle1, .start .circle2, .start .circle3, .start .circle4, .start .circle5 {
+  r: 0;
+  animation-name: circle;
+  animation-duration: .2s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.start .circle2 {
+  animation-delay: 2.1s;
+}
+.start .circle3 {
+  animation-delay: 2.2s;
+}
+.start .circle4 {
+  animation-delay: 2.3s;
+}
+.start .circle5 {
+  animation-delay: 2.4s;
+}
+
+.jump #head {
+  animation-name: jumpHead,jumpHeadBottom;
+  animation-duration: .5s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.jump .head-shadow {
+  animation-name: jumpHeadShadow,jumpHeadShadowBottom;
+  animation-duration: .5s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.jump #body1 {
+  animation-name: jumpBody1,jumpBody1Bottom;
+  animation-duration: .5s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.jump #body2 {
+  animation-name: jumpBody2,jumpBody2Bottom;
+  animation-duration: .5s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.jump .body2-shadow {
+  animation-name: jumpBody2Shadow,jumpBody2ShadowBottom;
+  animation-duration: .5s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.jump .arm-right {
+  transform: scale(0.3);
+  transform-origin: center;
+}
+.jump .arm-left {
+  transform: scaleX(0.3) scaleY(0.3);
+  transform-origin: 22em 26em;
+}
+.jump .cal {
+  transform: scaleX(0.3);
+  transform-origin: 26em;
+}
+.jump .cal {
+  transform: scaleX(0.3);
+  animation-name: jumpAction;
+  animation-duration: .4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.jump .arm-right {
+  animation-name: jumpAction;
+  animation-duration: .2s;
+  animation-delay: 1.1s;
+  animation-fill-mode: forwards;
+}
+.jump .arm-left {
+  animation-name: jumpAction;
+  animation-duration: .2s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
+.jump .hat {
+  transform: translateY(-40vh);
+}
+.jump .hat {
+  animation-name: setBody;
+  animation-duration: .3s;
+  animation-delay: 1.1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.jump .circle1, .jump .circle2 {
+  transform: scaleY(1);
+  transform-origin: 0em 20em;
+  animation-name: blink;
+  animation-duration: 1.6s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rejumpHead {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-13vw);
+  }
+}
+@keyframes rejumpHeadShadow {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rejumpHeadBottom {
+  0% {
+    transform: translateY(-13vw);
+  }
+  100% {
+    transform: translateY(60vw);
+  }
+}
+@keyframes rejumpBody1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5vw);
+  }
+}
+@keyframes rejumpBody1Bottom {
+  0% {
+    transform: translateY(-5vw);
+  }
+  100% {
+    transform: translateY(60vw);
+  }
+}
+@keyframes rejumpBody2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-9vw);
+  }
+}
+@keyframes rejumpBody2Shadow {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rejumpBody2Bottom {
+  0% {
+    transform: translateY(-9vw);
+  }
+  100% {
+    transform: translateY(60vw);
+  }
+}
+.rejump #head {
+  animation-name: rejumpHead,rejumpHeadBottom;
+  animation-duration: .5s,1s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.rejump .head-shadow {
+  animation-name: rejumpHeadShadow;
+  animation-duration: .5s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  animation-fill-mode: forwards;
+}
+.rejump #body1 {
+  animation-name: rejumpBody1,rejumpBody1Bottom;
+  animation-duration: .5s,1s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.rejump #body2 {
+  animation-name: rejumpBody2,rejumpBody2Bottom;
+  animation-duration: .5s,1s;
+  animation-delay: 0s,.5s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1), cubic-bezier(0.51, 0.01, 0.79, 0.02);
+  animation-fill-mode: forwards;
+}
+.rejump .body2-shadow {
+  animation-name: rejumpBody2Shadow;
+  animation-duration: .5s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.7, 1);
+  animation-fill-mode: forwards;
+}
