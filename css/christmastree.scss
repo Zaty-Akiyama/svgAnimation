@@ -1,0 +1,148 @@
+$baseColor: rgba(255,255,255,1);
+$bgColor: #FFbdb6;
+
+*{
+  position: relative;
+}
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+  &::after{
+    content: "ZATY.jp";
+    font-size: 40px;
+    color: #0a0a0a;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+  }
+}
+body{
+  border: 10px solid $baseColor;
+  padding: 0vw;
+  width: 95vw;
+  height: 95vw;
+  margin: 0;
+  overflow: hidden;
+}
+@keyframes lump {
+  to{
+    opacity: 1;
+  }
+}
+@keyframes blink1 {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .4;
+  }
+}
+#lumps{
+  circle{
+    opacity: 0;
+    animation:{
+      name: lump;
+      duration: .1s;
+      fill-mode: forwards;
+    }
+  }
+  @for $i from 1 through 45{
+    circle:nth-of-type(#{46 - $i}){
+      animation:{
+        name: lump,blink1;
+        duration: .1s,1s;
+        fill-mode: forwards;
+        iteration-count:1,infinite;
+      }
+
+      animation-delay: #{.5s + 0.06s * $i},#{0.2s*$i};
+    }
+  }
+}
+.bombs{
+  transform: scale(.1) translate(-123em, -96em);
+  transform-origin: 40em 27em;
+  *{
+    stroke-width: .4em;
+  }
+}
+.bomb-1{
+  transform: scale(0.1) translate(-123em, -96em);
+}
+.bomb-2{
+  transform: scale(0.1) translate(-158em, -66em);
+}
+.bomb-3{
+  transform: scale(0.1) translate(-104em, -38em);
+}
+.bomb-4{
+  transform: scale(0.1) translate(-172em, 2em);
+}
+.bomb-5{
+  transform: scale(0.1) translate(-93em, 5em);
+}
+.bomb-6{
+  transform: scale(0.1) translate(-147em, 35em);
+}
+.bomb-7{
+  transform: scale(0.1) translate(-84em, 60em);
+}
+.bomb-8{
+  transform: scale(0.1) translate(-197em, 63em);
+}
+@keyframes br{
+  0%{
+    transform: rotate(0);
+  }
+  25%{
+    transform: rotate(20deg);
+  }
+  75%{
+    transform: rotate(-20deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+@for $i from 1 through 8{
+  #bomb#{$i}{
+    transform: translateY(-500em);
+    transform-origin: 25em 17em;
+    animation:{
+      name: bomb#{$i},br;
+      duration: .3s,2s;
+      delay: #{1.5s + .3s*$i},#{1.8s + .3s*$i};
+      timing-function: ease-in,linear;
+      fill-mode: forwards;
+      iteration-count:1,infinite;
+    }
+    @keyframes bomb#{$i}{
+      to{
+        transform: translateY(0em);
+      }
+    }
+  }
+}
+#star{
+  transform-origin: 25.3em 10.7em;;
+  transform:translateY(-12em) rotate(1440deg);
+  animation:{
+    name: starBottom;
+    duration: 3.2s;
+    delay: .4s;
+    timing-function: linear;
+    fill-mode: forwards;
+  }
+  @keyframes starBottom{
+    from{
+      transform:translateY(-12em) rotate(720deg);
+    }
+    to{
+      transform:translateY(0em) rotate(0deg);
+    }
+  }
+}
