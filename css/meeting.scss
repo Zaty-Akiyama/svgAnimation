@@ -1,0 +1,121 @@
+$baseColor: rgba(255,255,255,1);
+$bgColor: #0E0E0E;
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $bgColor;
+  &::after{
+    content: "ZATY.jp";
+    font-size: 40px;
+    color: $baseColor;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+  }
+
+}
+body{
+  border: 10px solid $baseColor;
+  padding: 15vw;
+  width: 65vw;
+  height: 65vw;
+}
+svg{
+  overflow: visible;
+  font-size: 10px;
+  *{
+    fill: $baseColor;
+    stroke: $baseColor;
+  }
+}
+@keyframes line {
+  0%{
+    stroke-dashoffset: 100;
+  }
+  10%{
+    stroke-dashoffset: 100;
+  }
+  100%{
+    stroke-dashoffset: 200;
+  }
+}
+line{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  @for $i from 1 through 3{
+    &:nth-of-type(#{$i}),&:nth-of-type(#{$i+3}){
+      animation:{
+        name: line;
+        duration: .4s;
+        delay: #{2.5 + .2 * $i}s;
+        iteration-count: 5;
+        fill-mode: forwards;
+      }
+    }
+  }
+}
+rect{
+  height: 0;
+  transform: translateY(4.34em);
+  animation:{
+    name: rect;
+    duration: .5s;
+    delay: 1s;
+    fill-mode: forwards;
+  }
+  @keyframes rect{
+    to{
+      height: 4.34em;
+      transform: translateY(0);
+    }
+  }
+}
+@keyframes chair{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chair{
+  opacity: 0;
+  transform: translateY(1em);
+  animation:{
+    name: chair;
+    duration: .5s;
+    delay: 1.2s;
+    fill-mode: forwards;
+  }
+}
+.table{
+  opacity: 0;
+  transform: translateY(1em);
+  animation:{
+    name: chair;
+    duration: .5s;
+    delay: 1.4s;
+    fill-mode: forwards;
+  }
+}
+@keyframes human {
+  to{
+    transform: scaleY(1);
+  }
+}
+.human1,.human2{
+  transform: scaleY(0);
+  transform-origin: 60em 62.5em;
+  animation:{
+    name: human;
+    duration: .5s;
+    delay: 1.9s;
+    fill-mode: forwards;
+  }
+}
+.human1{
+  transform-origin: 40em 62.5em;
+  animation-delay: 2.3s;
+}
