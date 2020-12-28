@@ -1,0 +1,194 @@
+$baseColor: rgba(255,255,255,1);
+$bgColor: #c1d9e5;
+
+*{
+  position: relative;
+}
+
+html{
+  font-size: 10px;
+  height: 100vh;
+  background: $bgColor;
+  overflow: hidden;
+  &::after{
+    font-size: 40px;
+    color: #0a0a0a;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+  }
+}
+@keyframes windows {
+  to{
+    transform: scale(1.9);
+  }
+}
+@keyframes windowback {
+  from{
+    transform: scale(1.9);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+body{
+  margin: 0;
+  overflow: hidden;
+}
+.g{
+  transform-origin: 19em 0;
+  animation:{
+    name: windows,windowback;
+    duration: 3s,3s;
+    delay: 12s,23s;
+    fill-mode: forwards;
+    timing-function: ease;
+  }
+}
+
+@keyframes santa {
+  to{
+    transform: scale(0.6) translateY(5em) translateX(-60em);
+  }
+}
+.santa{
+  transform: scale(0.6) translateY(5em) translateX(90em);
+  animation:{
+    name: santa;
+    duration: 7s;
+    delay: 15s;
+    fill-mode: forwards;
+    timing-function: linear;
+  }
+}
+
+#house{
+  top: -100.4em;
+}
+
+.window{
+  width: 50em;
+  height: 50em;
+  opacity: .4;
+}
+@keyframes lump {
+  to{
+    opacity: 1;
+  }
+}
+@keyframes blink1 {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .4;
+  }
+}
+#lumps{
+  ellipse{
+    opacity: 1;
+  }
+  @for $i from 1 through 45{
+    ellipse:nth-of-type(#{46 - $i}){
+      animation:{
+        name: blink1;
+        duration: .8s;
+        fill-mode: forwards;
+        iteration-count: infinite;
+      }
+
+      animation-delay:#{ 0.2s*$i};
+    }
+  }
+}
+.wall{
+  width: 40em;
+  transform: translateX(55em);
+}
+$drop1size: 40vw;
+$drop2size: 50vw;
+@keyframes drop1 {
+	0%   { background-position: 0 0; }
+	100% { background-position: $drop1size*1 $drop1size*2; }
+}
+@keyframes drop1wrap {
+	0%   { left: 0vw;top: 0; }
+  25% { left: -4vw;top: 2vw; }
+  50% { left: 0vw;top: 0; }
+  75% { left: -3vw;top: 3vw; }
+	100% { left: 0;top: 0;}
+}
+@keyframes drop2 {
+	0%   { background-position: 0 0; }
+	100% { background-position: 0vw 40vw; }
+}
+@keyframes drop2wrap {
+	0%   { left: 0vw; }
+  25% { left: -4vw; }
+  50% { left: 0vw; }
+  75% { left: 4vw; }
+	100% { left: 0; }
+}
+.snow1{
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  background: {
+    image: url("../snow/snow1.svg");
+    repeat: repeat;
+    size: 20vw 20vw;
+  }
+  animation: {
+    name: drop1;
+    duration: 9s;
+    timing-function: linear;
+    iteration-count: infinite;
+  }
+  &-wrap{
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: -50vw;
+    left: -50vh;
+    animation: {
+      name: drop1wrap;
+      duration: 15s;
+      timing-function: ease-in-out;
+      iteration-count: infinite;
+    }
+
+  }
+}
+.snow2{
+  width: 200vw;
+  height: 200vh;
+  position: absolute;
+  top: -50vw;
+  left: -50vh;
+  background: {
+    image: url("../snow/snow2.svg");
+    repeat: repeat;
+    size: 20vw 20vw;
+  }
+  animation: {
+    name: drop2;
+    duration: 5s;
+    timing-function: linear;
+    iteration-count: infinite;
+  }
+  &-wrap{
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: -50vw;
+    left: -50vh;
+    animation: {
+      name: drop2wrap;
+      duration: 4s;
+      timing-function: ease-in-out;
+      iteration-count: infinite;
+    }
+  }
+}
