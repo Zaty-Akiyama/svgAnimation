@@ -1,0 +1,103 @@
+* {
+  position: relative;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #54778a;
+  overflow: hidden;
+}
+html::after {
+  content: "ZATY.jp";
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  right: 35px;
+}
+
+body {
+  border: 10px solid white;
+  padding: 4vw;
+  width: 86vw;
+  height: 86vw;
+  overflow: hidden;
+}
+body::after {
+  content: '';
+  border: 10px solid white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 11;
+}
+
+svg {
+  overflow: visible;
+  font-size: 10px;
+}
+
+.shadow {
+  opacity: .16;
+}
+
+.move {
+  transform: scaleX(-1) translateX(80em);
+  animation-name: move;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+@keyframes move {
+  to {
+    transform: scaleX(-1) translateX(-80em);
+  }
+}
+#l_3, #l_6, #l_5, #l_4 {
+  animation-name: jump;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+@keyframes jump {
+  0%,43%,47%,53%,57%,100% {
+    transform: translateY(0);
+  }
+  45%,55% {
+    transform: translateY(-0.5em);
+  }
+}
+#l_4 {
+  animation-delay: .1s;
+}
+
+#l_5 {
+  animation-delay: .2s;
+}
+
+.tire {
+  animation-name: tire;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes tire {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+.tire-front {
+  transform-origin: 55.57em 47.65em;
+}
+.tire-back {
+  transform-origin: 27.48em 47.65em;
+}
